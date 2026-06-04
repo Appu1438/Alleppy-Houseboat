@@ -1,0 +1,110 @@
+/* =====================================================
+   SHARED PAGE STYLES (used across multiple pages)
+   ===================================================== */
+
+/* ── Page Hero ── */
+.page-hero {
+  position: relative;
+  background: var(--gradient-hero);
+  padding: 160px 0 80px;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(9,30,28,0.3) 0%, transparent 100%);
+}
+
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero h1 {
+  color: var(--cream);
+  margin: 12px 0 16px;
+  font-weight: 300;
+}
+
+.page-hero p {
+  color: rgba(250,246,238,0.7);
+  font-size: 1rem;
+  max-width: 580px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.78rem;
+  color: rgba(250,246,238,0.5);
+  margin-bottom: 12px;
+}
+
+.breadcrumb a { color: rgba(250,246,238,0.6); transition: color var(--dur); }
+.breadcrumb a:hover { color: var(--gold-light); }
+.breadcrumb span { color: var(--gold-light); }
+
+/* ── Filter Bar ── */
+.filter-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-dark);
+  padding: 20px 0;
+  position: sticky;
+  top: 76px;
+  z-index: 50;
+}
+
+.filter-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 8px 18px;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 2px;
+  background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--dur);
+  white-space: nowrap;
+}
+
+.filter-tab:hover { border-color: var(--teal-bright); color: var(--teal-mid); }
+.filter-tab.active { background: var(--teal-deep); color: var(--cream); border-color: var(--teal-deep); }
+
+.results-count {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}

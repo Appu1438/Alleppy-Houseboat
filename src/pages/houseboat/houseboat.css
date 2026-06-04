@@ -1,0 +1,117 @@
+@import '../../assets/css/shared.css';
+
+/* =====================================================
+   HOUSEBOATS PAGE
+   ===================================================== */
+
+.boats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.boat-listing-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  transition: transform var(--dur), box-shadow var(--dur);
+}
+
+.boat-listing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.blc-image {
+  position: relative;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--accent, var(--teal-mid)) 20%, var(--cream-dark)),
+    color-mix(in srgb, var(--accent, var(--teal-mid)) 10%, var(--cream))
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.blc-placeholder { color: var(--accent, var(--teal-mid)); opacity: 0.65; }
+.blc-placeholder svg { width: 160px; height: 110px; }
+
+.blc-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--teal-deep);
+  color: var(--gold-light);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.blc-type {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  color: white;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.blc-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blc-body h3 { margin-bottom: 12px; }
+
+.blc-amenities {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.blc-amenities span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--cream);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.blc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--cream-dark);
+  padding-top: 16px;
+}
+
+.blc-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--teal-deep);
+}
+
+.blc-unit { font-size: 0.82rem; color: var(--text-muted); }
+
+.blc-actions { display: flex; gap: 10px; }
+
+@media (max-width: 1100px) { .boats-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 700px) {
+  .boat-listing-card { grid-template-columns: 1fr; }
+  .blc-image { min-height: 180px; }
+}
