@@ -20,14 +20,14 @@ export default function Footer() {
             {/* Brand Column */}
             <div className="footer-brand">
               <Link to="/" className="footer-logo">
-                <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="footer-logo-icon">
+                {/* <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="footer-logo-icon">
                   <path d="M2 22 Q10 10 20 14 Q30 18 38 6" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" fill="none"/>
                   <path d="M6 22 L8 12 L20 8 L32 12 L34 22 Z" fill="#c9973a" opacity="0.2"/>
                   <path d="M8 22 L12 14 L20 11 L28 14 L32 22" stroke="#c9973a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                   <rect x="2" y="22" width="36" height="3" rx="1.5" fill="#c9973a" opacity="0.3"/>
                   <path d="M17 11 L17 6 L23 6 L23 11" stroke="#c9973a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
                   <path d="M17 6 L20 3 L23 6" stroke="#c9973a" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                </svg> */}
                 <div>
                   <strong>Alappuzha</strong>
                   <em>Houseboat Holidays</em>
