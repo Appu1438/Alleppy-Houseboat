@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/home/Home'
 import Houseboats from './pages/houseboat/Houseboat'
-import HouseboatDetail from './pages/houseBoatDetails/HouseBoatDetails'
+import HouseboatDetail from './pages/houseboatDetails/HouseboatDetails'
 import Packages from './pages/packages/Packages'
 import Gallery from './pages/gallery/Gallery'
 
@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/houseboats/:id" element={<HouseboatDetail />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/gallery" element={<Gallery />} />
-        
+
         {/*  <Route path="/about"                      element={<About />} />
           <Route path="/contact"                    element={<Contact />} />
           <Route path="/faq"                        element={<FAQ />} /> */}
