@@ -7,15 +7,6 @@ import HouseboatDetail from './pages/houseboatDetails/HouseboatDetails'
 import Packages from './pages/packages/Packages'
 import Gallery from './pages/gallery/Gallery'
 
-// import About              from './pages/About'
-// import Contact            from './pages/Contact'
-// import FAQ                from './pages/FAQ'
-
-// // SEO Landing Pages
-// import AlleppeyHouseboats       from './pages/seo/AlleppeyHouseboats'
-// import LuxuryHouseboats         from './pages/seo/LuxuryHouseboats'
-// import HoneymoonHouseboats      from './pages/seo/HoneymoonHouseboats'
-// import AlleppeyPackages         from './pages/seo/AlleppeyPackages'
 
 export default function App() {
   return (

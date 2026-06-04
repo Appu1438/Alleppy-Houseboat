@@ -44,8 +44,8 @@ export default function Header() {
       <div className="header-inner container">
 
         {/* Logo */}
-        <Link to="/" className="logo" aria-label="Kerala Houseboat Holidays Home">
-          <span className="logo-icon">
+        <Link to="/" className="logo" aria-label="Alappuzha Houseboat Holidays Home">
+          {/* <span className="logo-icon">
             <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 22 Q10 10 20 14 Q30 18 38 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
               <path d="M6 22 L8 12 L20 8 L32 12 L34 22 Z" fill="currentColor" opacity="0.18"/>
@@ -54,9 +54,9 @@ export default function Header() {
               <path d="M17 11 L17 6 L23 6 L23 11" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
               <path d="M17 6 L20 3 L23 6" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </span>
+          </span> */}
           <span className="logo-text">
-            <strong>Kerala</strong>
+            <strong>Alappuzha</strong>
             <em>Houseboat Holidays</em>
           </span>
         </Link>
@@ -100,15 +100,6 @@ export default function Header() {
 
         {/* CTA + Hamburger */}
         <div className="header-actions">
-          <a
-            href="tel:+919876543210"
-            className="header-phone"
-            aria-label="Call us"
-          >
-            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            <span>+91 98765 43210</span>
-          </a>
-          <Link to="/contact" className="btn btn-primary header-cta">Book Now</Link>
           <button
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen(v => !v)}
@@ -138,10 +129,10 @@ export default function Header() {
             <li><Link to="/alleppey-houseboat-packages">Houseboat Packages</Link></li>
           </ul>
         </nav>
-        <div className="mobile-cta">
+        {/* <div className="mobile-cta">
           <a href="tel:+919876543210" className="btn btn-outline">Call Us</a>
           <Link to="/contact" className="btn btn-primary">Book Now</Link>
-        </div>
+        </div> */}
       </div>
     </header>
   )

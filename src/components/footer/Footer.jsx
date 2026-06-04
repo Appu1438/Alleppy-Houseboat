@@ -29,7 +29,7 @@ export default function Footer() {
                   <path d="M17 6 L20 3 L23 6" stroke="#c9973a" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <div>
-                  <strong>Kerala</strong>
+                  <strong>Alappuzha</strong>
                   <em>Houseboat Holidays</em>
                 </div>
               </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="container">
-          <p>© {year} Kerala Houseboat Holidays. All rights reserved.</p>
+          <p>© {year} Alappuzha Houseboat Holidays. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
