@@ -257,28 +257,3 @@ img { max-width: 100%; height: auto; display: block; }
   .container { padding: 0 16px; }
 }
 
-/* ---------- WhatsApp Float ---------- */
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 999;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-  cursor: pointer;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-  text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 30px rgba(37,211,102,0.5);
-}
-
-.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
