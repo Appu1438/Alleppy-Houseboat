@@ -4,7 +4,7 @@ import './houseboat.css'
 import { boats } from '../../themes/constants/boats'
 
 
-const types = ['All', 'Deluxe', 'Premium', 'Luxury', 'Honeymoon', 'Family']
+const types = ['All', 'Deluxe', 'Premium', 'Luxury']
 
 const typeColors = {
     Luxury: '#c9973a', Honeymoon: '#d97b8a', Family: '#2a8a82', Deluxe: '#5a7a6a', Premium: '#7a6aaa',
