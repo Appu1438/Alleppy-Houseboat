@@ -7,6 +7,20 @@
   align-items: start;
 }
 
+.detail-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Photo Grid */
 .photo-grid {
   display: grid;
@@ -18,7 +32,10 @@
   margin-bottom: 32px;
 }
 
-.photo-main { grid-row: 1 / 3; }
+
+.photo-main {
+  grid-row: 1 / 3;
+}
 
 .photo-placeholder {
   width: 100%;
@@ -29,8 +46,15 @@
   justify-content: center;
 }
 
-.main-photo svg { width: 100%; height: 100%; }
-.small-photo svg { width: 100%; height: 100%; }
+.main-photo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.small-photo svg {
+  width: 100%;
+  height: 100%;
+}
 
 /* Tabs */
 .detail-tabs {
@@ -67,13 +91,24 @@
   transition: transform var(--dur) var(--ease);
 }
 
-.detail-tab:hover { color: var(--teal-mid); }
-.detail-tab.active { color: var(--teal-deep); font-weight: 500; }
-.detail-tab.active::after { transform: scaleX(1); }
+.detail-tab:hover {
+  color: var(--teal-mid);
+}
 
-.tab-content h3 { margin-bottom: 16px; }
+.detail-tab.active {
+  color: var(--teal-deep);
+  font-weight: 500;
+}
 
-.tab-content > p {
+.detail-tab.active::after {
+  transform: scaleX(1);
+}
+
+.tab-content h3 {
+  margin-bottom: 16px;
+}
+
+.tab-content>p {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.8;
@@ -99,8 +134,13 @@
   font-size: 0.85rem;
 }
 
-.fact-item span { font-size: 1.1rem; }
-.fact-item strong { color: var(--teal-deep); }
+.fact-item span {
+  font-size: 1.1rem;
+}
+
+.fact-item strong {
+  color: var(--teal-deep);
+}
 
 /* Amenity Grid */
 .amenity-grid {
@@ -117,10 +157,19 @@
   color: var(--text-body);
 }
 
-.check-icon { width: 16px; height: 16px; color: var(--teal-bright); flex-shrink: 0; }
+.check-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--teal-bright);
+  flex-shrink: 0;
+}
 
 /* Itinerary */
-.itinerary-list { display: flex; flex-direction: column; gap: 0; }
+.itinerary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 
 .itinerary-item {
   display: grid;
@@ -131,7 +180,9 @@
   border-bottom: 1px dashed var(--cream-dark);
 }
 
-.itinerary-item:last-child { border-bottom: none; }
+.itinerary-item:last-child {
+  border-bottom: none;
+}
 
 .it-time {
   font-size: 0.78rem;
@@ -148,10 +199,17 @@
   justify-self: center;
 }
 
-.it-event { font-size: 0.9rem; color: var(--text-body); }
+.it-event {
+  font-size: 0.9rem;
+  color: var(--text-body);
+}
 
 /* Pricing Options */
-.pricing-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pricing-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
 
 .pricing-option {
   background: var(--white);
@@ -165,11 +223,13 @@
   transition: border-color var(--dur);
 }
 
-.pricing-option:hover { border-color: var(--teal-bright); }
+.pricing-option:hover {
+  border-color: var(--teal-bright);
+}
 
 .featured-pkg {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201,151,58,0.12);
+  box-shadow: 0 0 0 3px rgba(201, 151, 58, 0.12);
 }
 
 .pkg-badge {
@@ -188,13 +248,34 @@
   white-space: nowrap;
 }
 
-.pricing-option h4 { font-size: 1rem; margin-bottom: 4px; }
-.pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--teal-deep); line-height: 1; }
-.pkg-meta { font-size: 0.78rem; color: var(--text-muted); }
-.pkg-inc { font-size: 0.78rem; color: var(--teal-bright); margin-bottom: 8px; }
+.pricing-option h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.pkg-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--teal-deep);
+  line-height: 1;
+}
+
+.pkg-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.pkg-inc {
+  font-size: 0.78rem;
+  color: var(--teal-bright);
+  margin-bottom: 8px;
+}
 
 /* Sidebar */
-.detail-sidebar { position: sticky; top: 100px; }
+.detail-sidebar {
+  position: sticky;
+  top: 100px;
+}
 
 .sidebar-card {
   background: var(--white);
@@ -204,14 +285,34 @@
   margin-bottom: 20px;
 }
 
-.sidebar-card h3 { margin-bottom: 0; }
+.sidebar-card h3 {
+  margin-bottom: 0;
+}
 
-.sidebar-price { margin-bottom: 20px; }
-.sidebar-price strong { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--teal-deep); display: block; line-height: 1; }
-.sidebar-price span { font-size: 0.78rem; color: var(--text-muted); }
+.sidebar-price {
+  margin-bottom: 20px;
+}
 
-.sidebar-card .form-group { margin-bottom: 12px; }
-.sidebar-card .form-group:last-of-type { margin-bottom: 16px; }
+.sidebar-price strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--teal-deep);
+  display: block;
+  line-height: 1;
+}
+
+.sidebar-price span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.sidebar-card .form-group {
+  margin-bottom: 12px;
+}
+
+.sidebar-card .form-group:last-of-type {
+  margin-bottom: 16px;
+}
 
 .sidebar-card .form-group label {
   display: block;
@@ -239,7 +340,9 @@
 }
 
 .sidebar-card .form-group input:focus,
-.sidebar-card .form-group select:focus { border-color: var(--teal-bright); }
+.sidebar-card .form-group select:focus {
+  border-color: var(--teal-bright);
+}
 
 .sidebar-info {
   background: var(--white);
@@ -257,19 +360,53 @@
   font-size: 1.1rem;
 }
 
-.info-row > div { display: flex; flex-direction: column; gap: 2px; }
-.info-row strong { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.05em; color: var(--teal-deep); }
-.info-row span { font-size: 0.82rem; color: var(--text-muted); }
+.info-row>div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-row strong {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--teal-deep);
+}
+
+.info-row span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
 
 @media (max-width: 1000px) {
-  .detail-layout { grid-template-columns: 1fr; }
-  .detail-sidebar { position: static; }
-  .pricing-options { grid-template-columns: 1fr; }
-  .quick-facts { grid-template-columns: repeat(2, 1fr); }
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    position: static;
+  }
+
+  .pricing-options {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-  .photo-grid { grid-template-columns: 1fr; grid-template-rows: 220px; }
-  .photo-grid .photo-thumb { display: none; }
-  .amenity-grid { grid-template-columns: 1fr; }
+  .photo-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px;
+  }
+
+  .photo-grid .photo-thumb {
+    display: none;
+  }
+
+  .amenity-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -51,19 +51,31 @@ export default function Houseboats() {
                     <div className="boats-grid">
                         {filtered.map(boat => (
                             <div key={boat.id} className="boat-listing-card">
-                                <div className="blc-image" style={{ '--accent': typeColors[boat.type] || '#2a8a82' }}>
-                                    <div className="blc-placeholder">
-                                        <svg viewBox="0 0 160 110" fill="none">
-                                            <path d="M15 80 Q40 45 80 60 Q120 75 145 35" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.4" />
-                                            <path d="M25 80 L32 55 L80 42 L128 55 L135 80 Z" fill="currentColor" opacity="0.12" />
-                                            <path d="M30 80 L40 56 L80 46 L120 56 L130 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.5" />
-                                            <rect x="15" y="80" width="130" height="10" rx="5" fill="currentColor" opacity="0.18" />
-                                            <path d="M70 46 L70 30 L90 30 L90 46" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.45" />
-                                            <path d="M70 30 L80 20 L90 30" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.45" />
-                                        </svg>
-                                    </div>
-                                    {boat.tag && <span className="blc-tag">{boat.tag}</span>}
-                                    <span className="blc-type" style={{ background: typeColors[boat.type] || 'var(--teal-mid)' }}>{boat.type}</span>
+                                <div
+                                    className="blc-image"
+                                    style={{
+                                        "--accent":
+                                            typeColors[boat.type] || "#2a8a82",
+                                    }}
+                                >
+                                    <img src={boat.image} alt={boat.name} />
+
+                                    {boat.tag && (
+                                        <span className="blc-tag">
+                                            {boat.tag}
+                                        </span>
+                                    )}
+
+                                    <span
+                                        className="blc-type"
+                                        style={{
+                                            background:
+                                                typeColors[boat.type] ||
+                                                "var(--teal-mid)",
+                                        }}
+                                    >
+                                        {boat.type}
+                                    </span>
                                 </div>
                                 <div className="blc-body">
                                     <h3>{boat.name}</h3>
