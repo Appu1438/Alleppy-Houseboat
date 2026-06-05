@@ -37,7 +37,7 @@ export default function BackToTop() {
       </button>
 
       <a
-        href="https://wa.me/917399200800?text=Hi%2C%20I%27d%20like%20to%20book%20a%20houseboat"
+        href="https://wa.me/917736262841?text=Hi%2C%20I%27d%20like%20to%20book%20a%20houseboat"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"

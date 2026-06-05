@@ -155,9 +155,9 @@ export default function NotFound() {
         {/* Help strip */}
         <div className="nf-help-strip">
           <span>Need help?</span>
-          <a href="tel:+919876543210">📞 +91 98765 43210</a>
+          <a href="tel:+917736262841">📞 +91 7736 26 2841</a>
           <span>·</span>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+          <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
           <span>·</span>
           <Link to="/contact">✉️ Send Enquiry</Link>
         </div>

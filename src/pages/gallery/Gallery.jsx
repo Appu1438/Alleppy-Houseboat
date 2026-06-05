@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './gallery.css'
-import { galleryImages, galleryVideos } from '../../themes/constants/gallery'
+import { galleryImages, galleryVideos } from '../../themes/constants/gallery/gallery'
 
 const categories = ['All', 'Boats', 'Backwaters', 'Food', 'Sunsets', 'Activities']
 

@@ -103,7 +103,7 @@ export default function HoneymoonHouseboats() {
                 </div>
                 <button className="btn btn-primary" style={{width:'100%',justifyContent:'center'}} type="submit">Book Honeymoon Package</button>
               </form>
-              <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20honeymoon%20houseboat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
+              <a href="https://wa.me/917736262841?text=Hi%2C%20I%20want%20to%20book%20a%20honeymoon%20houseboat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
                 💬 WhatsApp for Details
               </a>
             </div>
@@ -183,7 +183,7 @@ export default function HoneymoonHouseboats() {
           <p>Fully decorated · Candlelight dinner · Personalised service · Free customisation</p>
           <div className="seo-cta-actions">
             <Link to="/contact" className="btn btn-primary">Book Honeymoon Package</Link>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp Us</a>
+            <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp Us</a>
           </div>
         </div>
       </section>

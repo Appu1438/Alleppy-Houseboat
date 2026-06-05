@@ -98,7 +98,7 @@ export default function AlleppeyHouseboats() {
                 </div>
                 <button className="btn btn-primary" style={{width:'100%',justifyContent:'center'}} type="submit">Check Availability</button>
               </form>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
+              <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
                 💬 WhatsApp Booking
               </a>
             </div>
@@ -181,7 +181,7 @@ export default function AlleppeyHouseboats() {
           <p>Instant confirmation · Free cancellation up to 48 hrs · Best price guaranteed</p>
           <div className="seo-cta-actions">
             <Link to="/contact" className="btn btn-primary">Book Now</Link>
-            <a href="tel:+919876543210" className="btn btn-outline">📞 Call +91 98765 43210</a>
+            <a href="tel:+917736262841" className="btn btn-outline">📞 Call +91 7736 26 2841</a>
           </div>
         </div>
       </section>

@@ -101,7 +101,7 @@ export default function AlleppeyPackages() {
             </div>
             <div className="seo-hero-actions">
               <Link to="/contact"  className="btn btn-primary">Get a Quote</Link>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp Us</a>
+              <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp Us</a>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function AlleppeyPackages() {
 
                 <div className="pkg-seo-actions">
                   <Link to="/contact" className="btn btn-primary" style={{flex:1, justifyContent:'center'}}>Book Now</Link>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{flex:1, justifyContent:'center'}}>WhatsApp</a>
+                  <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{flex:1, justifyContent:'center'}}>WhatsApp</a>
                 </div>
               </div>
             ))}
@@ -221,7 +221,7 @@ export default function AlleppeyPackages() {
           <p>Not sure which package to pick? Call or WhatsApp us — we'll recommend the best option for your group and budget.</p>
           <div className="seo-cta-actions">
             <Link to="/contact" className="btn btn-primary">Get Personalised Quote</Link>
-            <a href="tel:+919876543210" className="btn btn-outline">📞 Call +91 98765 43210</a>
+            <a href="tel:+917736262841" className="btn btn-outline">📞 Call +91 7736 26 2841</a>
           </div>
         </div>
       </section>

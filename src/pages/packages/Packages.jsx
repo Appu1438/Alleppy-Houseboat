@@ -7,7 +7,7 @@ const packages = [
     id: 'day-cruise',
     icon: '☀️',
     name: 'Day Cruise',
-    duration: '10:00 AM – 5:00 PM',
+    duration: '11:00 AM – 5:00 PM',
     color: '#c9973a',
     prices: [
       { tier: 'Deluxe', price: '₹3,500', beds: 1 },
@@ -126,7 +126,7 @@ export default function Packages() {
 
                 <div className="pkg-actions">
                   <Link to="/contact" className="btn btn-primary" style={{flex:1, justifyContent:'center'}}>Book Now</Link>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{flex:1, justifyContent:'center'}}>WhatsApp</a>
+                  <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{flex:1, justifyContent:'center'}}>WhatsApp</a>
                 </div>
               </div>
             ))}
@@ -174,7 +174,7 @@ export default function Packages() {
               <h3>Need a Custom Quote?</h3>
               <p>Corporate groups, special occasions, or custom durations — we create bespoke packages.</p>
               <Link to="/contact" className="btn btn-primary" style={{marginTop:20}}>Get Custom Quote</Link>
-              <a href="tel:+919876543210" className="btn btn-outline" style={{marginTop:10}}>📞 Call Now</a>
+              <a href="tel:+917736262841" className="btn btn-outline" style={{marginTop:10}}>📞 Call Now</a>
             </div>
           </div>
         </div>

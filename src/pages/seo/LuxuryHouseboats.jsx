@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../../assets/css/shared.css'
 import './seo.css'
+import { luxuryBoats } from '../../themes/constants/boats/luxuryBoats'
 
 const luxuryFeatures = [
   { icon: '🛏', title: 'Premium Bedrooms',      desc: 'Teak-wood furnished AC cabins with king-size beds, fine linen, and plush pillows.' },
@@ -13,10 +14,6 @@ const luxuryFeatures = [
   { icon: '🥂', title: 'Special Celebrations',   desc: 'Birthday, anniversary, and honeymoon setups with floral décor and personalised cakes.' },
 ]
 
-const luxuryBoats = [
-  { name: 'Royal Lotus', beds: 2, price: '₹12,000/night', highlight: 'Our Flagship Luxury Vessel' },
-  { name: 'Emerald Luxury', beds: 2, price: '₹11,500/night', highlight: 'Premium Interiors & Teak Deck' },
-]
 
 const faqs = [
   { q: 'What makes a luxury houseboat different from a deluxe one?', a: 'Luxury houseboats feature premium teak wood interiors, larger bedrooms with king beds, private upper sundeck, higher-grade bathroom fittings, a dedicated personal chef with a wider menu, and superior in-cruise service. Deluxe boats offer comfortable but standard fittings.' },
@@ -98,7 +95,7 @@ export default function LuxuryHouseboats() {
                 </div>
                 <button className="btn btn-primary" style={{width:'100%',justifyContent:'center'}} type="submit">Check Availability</button>
               </form>
-              <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20a%20luxury%20houseboat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
+              <a href="https://wa.me/917736262841?text=I%20want%20to%20book%20a%20luxury%20houseboat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{width:'100%',justifyContent:'center',marginTop:10}}>
                 💬 WhatsApp for Luxury Quote
               </a>
             </div>
@@ -173,7 +170,7 @@ export default function LuxuryHouseboats() {
           <p>Limited boats available · Early booking recommended · All meals & service included</p>
           <div className="seo-cta-actions">
             <Link to="/contact" className="btn btn-primary">Book Luxury Houseboat</Link>
-            <a href="tel:+919876543210" className="btn btn-outline">📞 Call for Availability</a>
+            <a href="tel:+917736262841" className="btn btn-outline">📞 Call for Availability</a>
           </div>
         </div>
       </section>

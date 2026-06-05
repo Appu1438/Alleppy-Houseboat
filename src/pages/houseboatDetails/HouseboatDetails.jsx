@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import './houseboatDetails.css'
-import { boatData } from '../../themes/constants/boatsData'
+import { boatData } from '../../themes/constants/boats/boatsData'
 
 
 
@@ -155,7 +155,7 @@ export default function HouseboatDetail() {
                   </button>
                 </form>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/917736262841"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-dark"

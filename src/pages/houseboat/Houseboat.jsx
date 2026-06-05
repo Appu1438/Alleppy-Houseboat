@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './houseboat.css'
-import { boats } from '../../themes/constants/boats'
+import { boats } from '../../themes/constants/boats/boats'
 
 
 const types = ['All', 'Deluxe', 'Premium', 'Luxury']
@@ -112,8 +112,8 @@ export default function Houseboats() {
                         Call or WhatsApp us and our team will recommend the perfect houseboat based on your group size, budget, and preferences.
                     </p>
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
-                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp</a>
+                        <a href="tel:+917736262841" className="btn btn-primary">📞 Call Now</a>
+                        <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp</a>
                     </div>
                 </div>
             </section>
