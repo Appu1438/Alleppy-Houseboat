@@ -8,6 +8,12 @@ import Packages from './pages/packages/Packages'
 import Gallery from './pages/gallery/Gallery'
 import About from './pages/about/About'
 import Contact from './pages/contact/Contact'
+import FAQ from './pages/faq/Faq'
+import AlleppeyHouseboats from './pages/seo/AlleppyHouseboats'
+import LuxuryHouseboats from './pages/seo/LuxuryHouseboats'
+import HoneymoonHouseboats from './pages/seo/HoneymoonHouseboats,'
+import AlleppeyPackages from './pages/seo/AlleppyPackages'
+import NotFound from './pages/notFound/NotFound'
 
 
 export default function App() {
@@ -22,13 +28,16 @@ export default function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/faq"                        element={<FAQ />} /> */}
+        <Route path="/faq" element={<FAQ />} />
 
         {/* SEO Pages */}
-        {/* <Route path="/alleppey-houseboats"              element={<AlleppeyHouseboats />} />
-          <Route path="/luxury-houseboats-alleppey"       element={<LuxuryHouseboats />} />
-          <Route path="/honeymoon-houseboats-alleppey"    element={<HoneymoonHouseboats />} />
-          <Route path="/alleppey-houseboat-packages"      element={<AlleppeyPackages />} /> */}
+        <Route path="/alleppey-houseboats" element={<AlleppeyHouseboats />} />
+        <Route path="/luxury-houseboats-alleppey" element={<LuxuryHouseboats />} />
+        <Route path="/honeymoon-houseboats-alleppey" element={<HoneymoonHouseboats />} />
+        <Route path="/alleppey-houseboat-packages" element={<AlleppeyPackages />} />
+
+
+        <Route path="*" element={<NotFound />} />
 
       </Route>
     </Routes>

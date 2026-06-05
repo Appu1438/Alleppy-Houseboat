@@ -1,0 +1,326 @@
+/* =====================================================
+   404 NOT FOUND PAGE
+   ===================================================== */
+
+.notfound-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  overflow: hidden;
+  padding: 100px 24px 60px;
+}
+
+/* ── Animated Background ── */
+.nf-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Subtle dot pattern */
+.nf-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Water waves at bottom */
+.nf-water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+}
+
+.nf-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wave-1 { animation: waveShift 7s ease-in-out infinite; }
+.wave-2 { animation: waveShift 9s ease-in-out infinite reverse; }
+.wave-3 { animation: waveShift 11s ease-in-out infinite 1s; }
+
+@keyframes waveShift {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-40px); }
+}
+
+/* ── Floating Boat ── */
+.nf-boat-wrap {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: boatFloat 5s ease-in-out infinite;
+}
+
+.nf-boat { width: 220px; opacity: 0.5; }
+.nf-boat svg { width: 100%; height: auto; }
+
+@keyframes boatFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0)  rotate(-1deg); }
+  33%       { transform: translateX(-50%) translateY(-8px) rotate(0.5deg); }
+  66%       { transform: translateX(-50%) translateY(-4px) rotate(-0.5deg); }
+}
+
+/* ── Floating Decorations ── */
+.nf-lily {
+  position: absolute;
+  font-size: 1.6rem;
+  opacity: 0.4;
+  animation: lilyDrift 8s ease-in-out infinite;
+}
+
+.nf-lily-1 { bottom: 100px; left: 8%;  animation-delay: 0s;   font-size: 1.2rem; }
+.nf-lily-2 { bottom: 130px; right: 10%; animation-delay: 2s;  font-size: 1rem; }
+.nf-lily-3 { bottom: 90px;  left: 20%; animation-delay: 4s;  font-size: 0.9rem; }
+
+@keyframes lilyDrift {
+  0%, 100% { transform: translateY(0)   rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(8deg); }
+}
+
+/* ── Main Content ── */
+.nf-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* ── 404 Code Display ── */
+.nf-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s var(--ease) both;
+}
+
+.nf-four {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+  text-shadow: 0 4px 40px rgba(201,151,58,0.3);
+  letter-spacing: -0.02em;
+}
+
+.nf-zero {
+  width: clamp(70px, 12vw, 110px);
+  height: clamp(70px, 12vw, 110px);
+  animation: spinSlow 12s linear infinite;
+}
+
+.nf-zero svg { width: 100%; height: 100%; }
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Text ── */
+.nf-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 14px;
+  animation: fadeUp 0.6s var(--ease) 0.1s both;
+}
+
+.nf-subtitle {
+  font-size: 0.95rem;
+  color: rgba(250,246,238,0.62);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 480px;
+  animation: fadeUp 0.6s var(--ease) 0.2s both;
+}
+
+/* ── Countdown ── */
+.nf-countdown {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 10px 22px 10px 10px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.6s var(--ease) 0.3s both;
+}
+
+.nf-countdown-ring {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.nf-countdown-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: none;
+}
+
+.nf-countdown-ring span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.nf-countdown > p {
+  font-size: 0.85rem;
+  color: rgba(250,246,238,0.65);
+  max-width: unset;
+  margin: 0;
+}
+
+.nf-countdown > p strong { color: var(--gold-light); }
+
+/* ── Action Buttons ── */
+.nf-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s var(--ease) 0.35s both;
+}
+
+.nf-btn-home {
+  padding: 13px 30px;
+  gap: 8px;
+}
+
+.nf-btn-back {
+  padding: 13px 28px;
+  gap: 8px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(250,246,238,0.85);
+}
+
+.nf-btn-back:hover {
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(255,255,255,0.35);
+  color: var(--cream);
+}
+
+/* ── Quick Links ── */
+.nf-links-section {
+  width: 100%;
+  animation: fadeUp 0.6s var(--ease) 0.4s both;
+}
+
+.nf-links-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(250,246,238,0.4);
+  margin-bottom: 14px;
+}
+
+.nf-quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.nf-quick-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: rgba(250,246,238,0.75);
+  font-size: 0.83rem;
+  transition: background var(--dur), border-color var(--dur), color var(--dur), transform var(--dur);
+  text-align: left;
+}
+
+.nf-quick-link:hover {
+  background: rgba(201,151,58,0.12);
+  border-color: rgba(201,151,58,0.3);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.nf-ql-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+.nf-ql-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity var(--dur), transform var(--dur);
+  color: var(--gold);
+}
+
+.nf-quick-link:hover .nf-ql-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* ── Help Strip ── */
+.nf-help-strip {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: rgba(250,246,238,0.4);
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  width: 100%;
+  animation: fadeUp 0.6s var(--ease) 0.5s both;
+}
+
+.nf-help-strip a {
+  color: rgba(250,246,238,0.6);
+  transition: color var(--dur);
+}
+
+.nf-help-strip a:hover { color: var(--gold-light); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .nf-quick-links { grid-template-columns: 1fr 1fr; }
+  .nf-boat-wrap   { display: none; }
+  .nf-lily        { display: none; }
+}
+
+@media (max-width: 400px) {
+  .nf-quick-links { grid-template-columns: 1fr; }
+  .nf-actions     { flex-direction: column; width: 100%; }
+  .nf-btn-home,
+  .nf-btn-back    { width: 100%; justify-content: center; }
+}
