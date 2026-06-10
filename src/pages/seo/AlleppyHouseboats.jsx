@@ -12,10 +12,10 @@ const highlights = [
 ]
 
 const boatTypes = [
-  { name: 'Deluxe Houseboat',  price: 'From ₹5,500/night',  desc: '1 bedroom, AC, attached bath, Kerala meals. Best value for couples.' },
-  { name: 'Premium Houseboat', price: 'From ₹8,000/night',  desc: '2 bedrooms, AC, spacious deck, chef-cooked meals.' },
-  { name: 'Luxury Houseboat',  price: 'From ₹11,500/night', desc: '2 bedrooms, premium interiors, private deck, all meals.' },
-  { name: 'Family Houseboat',  price: 'From ₹15,000/night', desc: '3–4 bedrooms, ideal for families and groups.' },
+  { name: 'Deluxe Houseboat',  price: 'From ₹8,000',  desc: '1 bedroom, AC, attached bath, Kerala meals. Best value for couples.' },
+  { name: 'Premium Houseboat', price: 'From ₹10,000',  desc: '2 bedrooms, AC, spacious deck, chef-cooked meals.' },
+  { name: 'Luxury Houseboat',  price: 'From ₹15,000', desc: '2 bedrooms, premium interiors, private deck, all meals.' },
+  { name: 'Family Houseboat',  price: 'From ₹15,000', desc: '3–4 bedrooms, ideal for families and groups.' },
 ]
 
 const nearbyAttractions = [
@@ -52,14 +52,14 @@ export default function AlleppeyHouseboats() {
               Experience the timeless beauty of Alleppey aboard our certified, comfortable houseboats.
               Drift through Kerala's legendary backwaters — the Venice of the East.
             </p>
-            <div className="seo-trust-bar">
+            {/* <div className="seo-trust-bar">
               <span>⭐ 4.9 / 5 Rating</span>
               <span>✅ Kerala Tourism Certified</span>
               <span>🏆 50,000+ Guests Served</span>
               <span>📍 Alleppey Finishing Point</span>
-            </div>
+            </div> */}
             <div className="seo-hero-actions">
-              <Link to="/contact"  className="btn btn-primary">Book a Houseboat ↗</Link>
+              <Link to="/contact"  className="btn btn-primary">Book a Houseboat</Link>
               <Link to="/packages" className="btn btn-outline">View Packages</Link>
             </div>
           </div>
@@ -107,10 +107,10 @@ export default function AlleppeyHouseboats() {
                 <div className="form-group">
                   <label>Package Type</label>
                   <select>
-                    <option>Overnight Stay</option>
-                    <option>Day Cruise</option>
-                    <option>Honeymoon</option>
-                    <option>Group</option>
+                    <option>Overnight Stay (12pm - 9am)</option>
+                    <option>Day Cruise (12pm - 5pm)</option>
+                    <option>Honeymoon (12 pm - 9 am)</option>
+                    <option>Night Stay (5pm - 9 am)</option>
                   </select>
                 </div>
                 <div className="form-group">
@@ -242,7 +242,7 @@ export default function AlleppeyHouseboats() {
           <h2>Book Your Alleppey Houseboat Today</h2>
           <p>Instant confirmation · Free cancellation up to 48 hrs · Best price guaranteed</p>
           <div className="seo-cta-actions">
-            <Link to="/contact" className="btn btn-primary">Book Now ↗</Link>
+            <Link to="/contact" className="btn btn-primary">Book Now </Link>
             <a href="tel:+917736262841" className="btn btn-outline">📞 Call +91 7736 26 2841</a>
           </div>
         </div>

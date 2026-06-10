@@ -17,7 +17,7 @@ const faqCategories = [
       },
       {
         q: 'Is there a minimum stay requirement?',
-        a: 'Our Day Cruise runs from 11 AM to 5 PM (minimum 6 hours). For overnight stays, the minimum is one night. We also offer 2-night and 3-night packages for a more immersive experience.',
+        a: 'Our Day Cruise runs from 12 PM to 5 PM (minimum 6 hours). For overnight stays, the minimum is one night. We also offer 2-night and 3-night packages for a more immersive experience.',
       },
       {
         q: 'What is the advance payment required?',
@@ -35,7 +35,7 @@ const faqCategories = [
     faqs: [
       {
         q: 'What are the check-in and check-out times?',
-        a: 'For overnight stays, check-in is at 12:00 PM (noon) and check-out is at 9:00 AM the next day. Day cruises start at 10:00 AM and end at 5:00 PM. Exact boarding location is the Alleppey Finishing Point.',
+        a: 'For overnight stays, check-in is at 12:00 PM (noon) and check-out is at 9:00 AM the next day. Day cruises start at 12:00 PM and end at 5:00 PM. Exact boarding location is the Alleppey Finishing Point.',
       },
       {
         q: 'Where exactly do we board the houseboat?',
@@ -302,7 +302,7 @@ export default function FAQ() {
               <p>Join thousands of happy guests who have experienced the magic of Kerala's backwaters.</p>
             </div>
             <div className="cta-band-actions">
-              <Link to="/contact"  className="btn btn-primary">Book Now ↗</Link>
+              <Link to="/contact"  className="btn btn-primary">Book Now</Link>
               <Link to="/packages" className="btn btn-outline">View Packages</Link>
             </div>
           </div>

@@ -1,74 +1,33 @@
 import { Link } from 'react-router-dom'
 import './packages.css'
+import { packages } from '../../themes/constants/packages/packages'
 
-const packages = [
-  {
-    id: 'day-cruise',
-    icon: '☀️',
-    name: 'Day Cruise',
-    duration: '11:00 AM – 5:00 PM',
-    color: 'var(--sunrise)',
-    prices: [
-      { tier: 'Deluxe',  price: '₹3,500', beds: 1 },
-      { tier: 'Premium', price: '₹4,500', beds: 2 },
-      { tier: 'Luxury',  price: '₹6,000', beds: 2 },
-    ],
-    includes: ['Welcome Drink', 'Lunch (Kerala Cuisine)', 'Evening Tea & Snacks', 'Sightseeing Cruise', 'Life Jackets', 'Professional Crew'],
-    popular: false,
-    desc: 'Perfect for day-trippers. Explore the backwaters and return by evening. Ideal for families and groups visiting Alleppey.',
-  },
-  {
-    id: 'overnight',
-    icon: '🌙',
-    name: 'Overnight Stay',
-    duration: '12:00 PM – 9:00 AM',
-    color: 'var(--ocean-bright)',
-    prices: [
-      { tier: 'Deluxe',  price: '₹5,500',  beds: 1 },
-      { tier: 'Premium', price: '₹8,000',  beds: 2 },
-      { tier: 'Luxury',  price: '₹12,000', beds: 2 },
-    ],
-    includes: ['All Meals (Lunch + Dinner + Breakfast)', 'Welcome Drink', 'Evening Tea', 'AC Bedroom(s)', 'Overnight Mooring', 'Fishing Experience', 'Morning Sunrise Cruise'],
-    popular: true,
-    desc: 'Our most popular package. Sleep aboard the houseboat, wake up to the serene sounds of the backwaters, and enjoy a full Kerala culinary experience.',
-  },
-  {
-    id: 'honeymoon',
-    icon: '💕',
-    name: 'Honeymoon Package',
-    duration: '12:00 PM – 9:00 AM',
-    color: 'var(--coral)',
-    prices: [
-      { tier: 'Premium', price: '₹9,500',  beds: 1 },
-      { tier: 'Luxury',  price: '₹13,000', beds: 2 },
-    ],
-    includes: ['Rose Petal Decoration', 'Candlelight Dinner', 'Welcome Champagne / Juice', 'Honeymoon Cake', 'Special Turn-down Service', 'All Meals', 'Private Sun Deck', 'Couple Photography Session'],
-    popular: false,
-    desc: 'A specially curated romantic experience for newlyweds. Floral décor, candlelight, special meals, and a private sunset cruise.',
-  },
-  {
-    id: 'group',
-    icon: '👨‍👩‍👧‍👦',
-    name: 'Group / Family Package',
-    duration: 'Flexible Duration',
-    color: 'var(--jungle)',
-    prices: [
-      { tier: 'Family (3BR)', price: '₹15,000', beds: 3 },
-      { tier: 'Group (4BR)',  price: '₹18,000', beds: 4 },
-    ],
-    includes: ['Multiple Bedrooms', 'All Meals for Group', 'Dedicated Chef', 'Spacious Sun Deck', 'BBQ Night', 'Group Activities', 'Special Decoration on Request'],
-    popular: false,
-    desc: 'Perfect for family gatherings, corporate outings, and large groups. Custom menus, spacious decks, and flexible arrangements.',
-  },
+
+
+const comparisonRows = [
+  { feature: 'Duration', dayCruise: '5 Hours', overnight: '21 Hours', honeymoon: '21 Hours', twoNight: '16 Hours' },
+  { feature: 'Meals', dayCruise: 'Lunch + Tea', overnight: 'All 3 Meals', honeymoon: 'All + Special', twoNight: 'Tea + Dinner + Breakfast' },
+  { feature: 'AC Bedroom', dayCruise: '—', overnight: '✅', honeymoon: '✅', twoNight: '✅' },
+  { feature: 'Decoration', dayCruise: '—', overnight: '—', honeymoon: 'Full Floral', twoNight: '_' },
+  { feature: 'Candlelight Dinner', dayCruise: '—', overnight: '—', honeymoon: '✅', twoNight: '_' },
+  { feature: 'Sunrise Cruise', dayCruise: '—', overnight: '✅', honeymoon: '✅', twoNight: '✅' },
+  { feature: 'Extended Route', dayCruise: 'Standard', overnight: 'Standard', honeymoon: 'Standard', twoNight: 'Standard' },
 ]
 
+const bestTimeRows = [
+  { month: 'October – February', rating: '⭐⭐⭐⭐⭐', weather: 'Cool & Sunny', note: 'Peak Season — Book Early' },
+  { month: 'March – May', rating: '⭐⭐⭐⭐', weather: 'Warm & Clear', note: 'Good — Fewer Crowds' },
+  { month: 'June – September', rating: '⭐⭐⭐', weather: 'Monsoon Season', note: 'Romantic — Lower Prices' },
+]
+
+
 const addons = [
-  { name: 'Kerala Ayurvedic Massage',   price: '₹1,200/person' },
+  { name: 'Kerala Ayurvedic Massage', price: '₹1,200/person' },
   { name: 'Sunset Photography Session', price: '₹2,500/couple' },
   { name: 'Kerala Cultural Performance', price: '₹3,000/show' },
-  { name: 'Private Fishing Trip',        price: '₹800/person'  },
-  { name: 'Village Tour by Canoe',       price: '₹600/person'  },
-  { name: 'BBQ Dinner Package',          price: '₹500/person'  },
+  { name: 'Private Fishing Trip', price: '₹800/person' },
+  { name: 'Village Tour by Canoe', price: '₹600/person' },
+  { name: 'BBQ Dinner Package', price: '₹500/person' },
 ]
 
 export default function Packages() {
@@ -79,11 +38,12 @@ export default function Packages() {
       <section className="page-hero">
         <div className="page-hero-pattern" />
         <div className="container">
-          <nav className="breadcrumb">
+          {/* <nav className="breadcrumb">
             <Link to="/">Home</Link>
             <span className="breadcrumb-sep">/</span>
             <span>Packages</span>
-          </nav>
+          </nav> */}
+
           <span className="section-label">Plans &amp; Pricing</span>
           <h1>Packages &amp; Pricing</h1>
           <p>Transparent, all-inclusive pricing. No hidden charges. All packages include meals, crew, and a memorable backwater journey.</p>
@@ -117,7 +77,7 @@ export default function Packages() {
                 <div className="pkg-tiers">
                   {pkg.prices.map(p => (
                     <div key={p.tier} className="pkg-tier">
-                      <span>{p.tier} · {p.beds}BR</span>
+                      <span>{p.tier} · ( {p.pax} Passenger )</span>
                       <strong>{p.price}</strong>
                     </div>
                   ))}
@@ -137,7 +97,7 @@ export default function Packages() {
 
                 <div className="pkg-actions">
                   <Link to="/contact" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
-                    Book Now ↗
+                    Book Now
                   </Link>
                   <a
                     href="https://wa.me/917736262841"
@@ -149,6 +109,67 @@ export default function Packages() {
                     WhatsApp
                   </a>
                 </div>
+                <div className="package-note">
+                  <p>
+                    * Prices are indicative and <strong>start</strong>  from the listed amount for <strong>2 guests</strong>. Rates may vary based on season, booking date, demand, and availability.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Comparison Table ── */}
+      <section className="section section--white">
+        <div className="container">
+          <div className="section-head">
+            <span className="section-label">Side-by-Side</span>
+            <h2>Package Comparison</h2>
+            <div className="coral-divider coral-divider--center" />
+          </div>
+          <div className="comparison-table-wrap">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Day Cruise</th>
+                  <th className="highlight-col">Overnight</th>
+                  <th>Honeymoon</th>
+                  <th>Night Stay</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map(row => (
+                  <tr key={row.feature}>
+                    <td className="feature-col">{row.feature}</td>
+                    <td>{row.dayCruise}</td>
+                    <td className="highlight-col">{row.overnight}</td>
+                    <td>{row.honeymoon}</td>
+                    <td>{row.twoNight}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Time ── */}
+      <section className="section section--sand">
+        <div className="container" style={{ maxWidth: 820 }}>
+          <div className="section-head">
+            <span className="section-label">Plan Your Visit</span>
+            <h2>Best Time to Visit Alleppey</h2>
+            <div className="coral-divider coral-divider--center" />
+          </div>
+          <div className="best-time-table">
+            {bestTimeRows.map(r => (
+              <div key={r.month} className="best-time-row">
+                <div className="bt-month">{r.month}</div>
+                <div className="bt-rating">{r.rating}</div>
+                <div className="bt-weather">{r.weather}</div>
+                <div className="bt-note">{r.note}</div>
               </div>
             ))}
           </div>
@@ -196,10 +217,10 @@ export default function Packages() {
               <h3>Need a Custom Quote?</h3>
               <p>Corporate groups, special occasions, or custom durations — we create bespoke packages tailored entirely to you.</p>
               <Link to="/contact" className="btn btn-primary">
-                Get Custom Quote ↗
+                Get Custom Quote
               </Link>
               <a href="tel:+917736262841" className="btn btn-outline">
-                📞 Call Us Now
+                Call Us Now
               </a>
             </div>
           </div>

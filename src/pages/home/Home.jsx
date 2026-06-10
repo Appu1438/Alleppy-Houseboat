@@ -203,15 +203,15 @@ export default function Home() {
               </p>
 
               <div className="hero-actions fade-up fade-up-delay-3">
-                <Link to="/packages" className="btn btn-primary">Explore Packages ↗</Link>
+                <Link to="/packages" className="btn btn-primary">Explore Packages</Link>
                 <Link to="/houseboats" className="btn btn-outline">View All Boats</Link>
               </div>
 
-              <div className="hero-trust fade-up fade-up-delay-4">
+              {/* <div className="hero-trust fade-up fade-up-delay-4">
                 <div className="hero-trust-pill"><span className="pill-icon">⭐</span>4.9 / 5 Rating</div>
                 <div className="hero-trust-pill"><span className="pill-icon">🏅</span>Kerala Tourism Certified</div>
                 <div className="hero-trust-pill"><span className="pill-icon">🚀</span>Instant Confirmation</div>
-              </div>
+              </div> */}
 
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <Link to="/about" className="btn btn-ocean">Our Story ↗</Link>
+            <Link to="/about" className="btn btn-ocean">Our Story</Link>
           </div>
 
         </div>
@@ -438,7 +438,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn btn-outline-dark"
             >
-              Read All Reviews on Google ↗
+              Read All Reviews on Google
             </a>
           </div>
 
@@ -458,7 +458,7 @@ export default function Home() {
             </div>
 
             <div className="cta-band-actions reveal-right">
-              <Link to="/contact" className="btn btn-primary">Book Now ↗</Link>
+              <Link to="/contact" className="btn btn-primary">Book Now</Link>
               <a
                 href="https://wa.me/917736262841"
                 target="_blank"

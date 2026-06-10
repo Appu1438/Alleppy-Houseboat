@@ -56,14 +56,14 @@ export default function LuxuryHouseboats() {
               Indulge in the finest backwater experience Kerala has to offer. Our luxury houseboats
               combine traditional craftsmanship, world-class comforts, and impeccable personal service.
             </p>
-            <div className="seo-trust-bar">
+            {/* <div className="seo-trust-bar">
               <span>⭐ 4.9 / 5 Rating</span>
               <span>🏆 #1 Luxury Operator</span>
               <span>✅ DTPC Certified</span>
               <span>💎 Premium Fleet</span>
-            </div>
+            </div> */}
             <div className="seo-hero-actions">
-              <Link to="/contact" className="btn btn-primary">Book Luxury Stay ↗</Link>
+              <Link to="/contact" className="btn btn-primary">Book Luxury Stay </Link>
               <Link to="/houseboats" className="btn btn-outline">View Luxury Boats</Link>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function LuxuryHouseboats() {
               stars, with Kerala fish curry cooked exactly the way it should be.
             </p>
             <p>
-              <strong>Starting from ₹11,500 per night</strong>, our luxury packages represent exceptional value.
+              <strong>Starting from ₹15,000</strong>, our luxury packages represent exceptional value.
               All meals, crew, sightseeing, and service included. No hidden costs.
             </p>
           </div>
@@ -106,8 +106,8 @@ export default function LuxuryHouseboats() {
               </div>
               <div className="coral-divider" />
               <div className="luxury-price-display">
-                <strong>From ₹11,500</strong>
-                <span>per night · All inclusive</span>
+                <strong>From ₹15,000</strong>
+                <span>All inclusive</span>
               </div>
               <form onSubmit={e => e.preventDefault()}>
                 <div className="form-group">
@@ -115,11 +115,11 @@ export default function LuxuryHouseboats() {
                   <input type="date" />
                 </div>
                 <div className="form-group">
-                  <label>Nights</label>
+                  <label>Package</label>
                   <select>
-                    <option>1 Night</option>
-                    <option>2 Nights</option>
-                    <option>3 Nights</option>
+                    <option>Day Cruise (12pm - 5pm)</option>
+                    <option>Over Night (12pm - 9am)</option>
+                    <option>Night Stay (5pm - 9am)</option>
                   </select>
                 </div>
                 <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} type="submit">
@@ -214,7 +214,7 @@ export default function LuxuryHouseboats() {
           <h2>Experience Alleppey's Finest Luxury</h2>
           <p>Limited boats available · Early booking recommended · All meals &amp; service included</p>
           <div className="seo-cta-actions">
-            <Link to="/contact" className="btn btn-primary">Book Luxury Houseboat ↗</Link>
+            <Link to="/contact" className="btn btn-primary">Book Luxury Houseboat </Link>
             <a href="tel:+917736262841" className="btn btn-outline">📞 Call for Availability</a>
           </div>
         </div>

@@ -212,6 +212,28 @@
   gap: 10px;
 }
 
+.package-note {
+  margin-top: 40px;
+  padding: 18px 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--coral);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.package-note p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.package-note strong {
+  color: var(--ocean-deep);
+}
+
 /* ── Add-ons ── */
 .addons-grid {
   display: grid;

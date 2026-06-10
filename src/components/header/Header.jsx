@@ -31,6 +31,7 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMenuOpen(false)
     setDropOpen(false)
   }, [pathname])
@@ -157,11 +158,6 @@ export default function Header() {
                       </Link>
                     </li>
 
-                    <li>
-                      <Link to="/alleppey-houseboat-packages">
-                        Houseboat Packages
-                      </Link>
-                    </li>
                   </ul>
                 )}
               </li>
@@ -239,11 +235,6 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li>
-                <Link to="/alleppey-houseboat-packages">
-                  Houseboat Packages
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>

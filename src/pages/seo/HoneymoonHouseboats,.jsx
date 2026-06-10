@@ -14,7 +14,7 @@ const romanticFeatures = [
 ]
 
 const testimonials = [
-  { name: 'Priya & Arjun', from: 'Bangalore', text: 'Our honeymoon on the Blossom Retreat was like a dream. The rose petals, candlelight dinner, and sunset — we will never forget this. Absolutely worth every rupee.', stars: 5 },
+  { name: 'Priya & Arjun', from: 'Bangalore', text: 'Our honeymoon on the alleppey backwater was like a dream. The rose petals, candlelight dinner, and sunset — we will never forget this. Absolutely worth every rupee.', stars: 5 },
   { name: 'Neha & Rahul', from: 'Delhi', text: 'We were completely blown away. The staff made everything feel so special and personal. The food was incredible. Best decision we made for our honeymoon.', stars: 5 },
   { name: 'Divya & Karthik', from: 'Chennai', text: 'Kerala backwaters for a honeymoon is a must! The houseboat was stunning, the service was impeccable, and the scenery was breathtaking. 10/10.', stars: 5 },
 ]
@@ -60,14 +60,14 @@ export default function HoneymoonHouseboats() {
               Begin your forever with the most romantic experience in India. Drift through Kerala's
               magical backwaters on a private houseboat crafted for love.
             </p>
-            <div className="seo-trust-bar">
+            {/* <div className="seo-trust-bar">
               <span>💕 1,000+ Honeymoon Couples</span>
               <span>⭐ 5-Star Romance Package</span>
               <span>🌹 Fully Decorated</span>
               <span>📸 Photography Available</span>
-            </div>
+            </div> */}
             <div className="seo-hero-actions">
-              <Link to="/contact" className="btn btn-primary">Book Honeymoon Package ↗</Link>
+              <Link to="/contact" className="btn btn-primary">Book Honeymoon Package</Link>
               <Link to="/packages" className="btn btn-outline">See Pricing</Link>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function HoneymoonHouseboats() {
               cake to the special turn-down service and the quiet sunrise cruise the following morning.
               We handle everything; you simply arrive and fall deeper in love.
             </p>
-            <p><strong>Starting from ₹9,500 per couple per night</strong>, all-inclusive.</p>
+            <p><strong>Starting from ₹12,000 per couple per night</strong>, all-inclusive.</p>
           </div>
 
           <div className="seo-intro-sidebar">
@@ -107,7 +107,7 @@ export default function HoneymoonHouseboats() {
               </div>
               <div className="coral-divider" />
               <div className="luxury-price-display">
-                <strong>From ₹9,500</strong>
+                <strong>From ₹12,000</strong>
                 <span>per couple · All inclusive</span>
               </div>
               <form onSubmit={e => e.preventDefault()}>
@@ -214,7 +214,7 @@ export default function HoneymoonHouseboats() {
           <h2>Begin Your Forever on Kerala's Backwaters 💕</h2>
           <p>Fully decorated · Candlelight dinner · Personalised service · Free customisation</p>
           <div className="seo-cta-actions">
-            <Link to="/contact" className="btn btn-primary">Book Honeymoon Package ↗</Link>
+            <Link to="/contact" className="btn btn-primary">Book Honeymoon Package </Link>
             <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               💬 WhatsApp Us
             </a>

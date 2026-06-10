@@ -12,7 +12,6 @@ import FAQ from './pages/faq/Faq'
 import AlleppeyHouseboats from './pages/seo/AlleppyHouseboats'
 import LuxuryHouseboats from './pages/seo/LuxuryHouseboats'
 import HoneymoonHouseboats from './pages/seo/HoneymoonHouseboats,'
-import AlleppeyPackages from './pages/seo/AlleppyPackages'
 import NotFound from './pages/notFound/NotFound'
 
 
@@ -34,7 +33,6 @@ export default function App() {
         <Route path="/alleppey-houseboats" element={<AlleppeyHouseboats />} />
         <Route path="/luxury-houseboats-alleppey" element={<LuxuryHouseboats />} />
         <Route path="/honeymoon-houseboats-alleppey" element={<HoneymoonHouseboats />} />
-        <Route path="/alleppey-houseboat-packages" element={<AlleppeyPackages />} />
 
 
         <Route path="*" element={<NotFound />} />

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './about.css'
 
 const milestones = [
-  { year: '2009', event: 'Kerala Houseboat Holidays founded by Nandhu Ghosh Kumar with 2 houseboats at Alleppey Finishing Point.' },
+  { year: '2009', event: 'Kerala Houseboat Holidays founded by Nandhu Ghosh with 2 houseboats at Alleppey Finishing Point.' },
   { year: '2012', event: 'Expanded fleet to 8 boats. Received Kerala Tourism certification and DTPC approval.' },
   { year: '2015', event: 'Launched the Luxury fleet segment and Honeymoon Special packages. First international guests from UK & Germany.' },
   { year: '2018', event: 'Reached 10,000 happy guests milestone. Introduced eco-friendly solar-powered boats.' },
@@ -54,7 +54,7 @@ export default function About() {
               <span className="section-label">Who We Are</span>
               <h2>Born on the Backwaters of Kerala</h2>
               <div className="coral-divider" />
-              <p>Kerala Houseboat Holidays was born from a lifelong love of Alleppey's backwaters. Founded in 2009 by Nandhu Ghosh Kumar, our company began with a simple dream: to share the timeless magic of this UNESCO-recognised waterway with the world.</p>
+              <p>Kerala Houseboat Holidays was born from a lifelong love of Alleppey's backwaters. Founded in 2009 by Nandhu Ghosh , our company began with a simple dream: to share the timeless magic of this UNESCO-recognised waterway with the world.</p>
               <p style={{ marginTop: 16 }}>What started as two houseboats and a handful of guests has grown into one of Kerala's most trusted houseboat operators — with a fleet of 25+ certified vessels, a team of 60+ dedicated professionals, and over 50,000 guests from 45+ countries served with warmth and care.</p>
               <p style={{ marginTop: 16 }}>We are not just a booking service. We are storytellers of the backwaters, guardians of Kerala's culinary traditions, and ambassadors of responsible adventure tourism.</p>
 
@@ -172,7 +172,7 @@ export default function About() {
             Join the 50,000+ adventurers who have trusted Kerala Houseboat Holidays for their dream backwater experience.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/packages" className="btn btn-primary">View Packages ↗</Link>
+            <Link to="/packages" className="btn btn-primary">View Packages</Link>
             <Link to="/contact"  className="btn btn-outline-dark">Get in Touch</Link>
           </div>
         </div>
