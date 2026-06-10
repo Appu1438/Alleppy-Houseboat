@@ -1,4 +1,3 @@
-// import  { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './packages.css'
 
@@ -8,14 +7,13 @@ const packages = [
     icon: '☀️',
     name: 'Day Cruise',
     duration: '11:00 AM – 5:00 PM',
-    color: '#c9973a',
+    color: 'var(--sunrise)',
     prices: [
-      { tier: 'Deluxe', price: '₹3,500', beds: 1 },
+      { tier: 'Deluxe',  price: '₹3,500', beds: 1 },
       { tier: 'Premium', price: '₹4,500', beds: 2 },
-      { tier: 'Luxury', price: '₹6,000', beds: 2 },
+      { tier: 'Luxury',  price: '₹6,000', beds: 2 },
     ],
-    includes: ['Welcome Drink','Lunch (Kerala Cuisine)','Evening Tea & Snacks','Sightseeing Cruise','Life Jackets','Professional Crew'],
-    excludes: ['Breakfast','Alcoholic Beverages','Water Sports'],
+    includes: ['Welcome Drink', 'Lunch (Kerala Cuisine)', 'Evening Tea & Snacks', 'Sightseeing Cruise', 'Life Jackets', 'Professional Crew'],
     popular: false,
     desc: 'Perfect for day-trippers. Explore the backwaters and return by evening. Ideal for families and groups visiting Alleppey.',
   },
@@ -24,14 +22,13 @@ const packages = [
     icon: '🌙',
     name: 'Overnight Stay',
     duration: '12:00 PM – 9:00 AM',
-    color: '#2a8a82',
+    color: 'var(--ocean-bright)',
     prices: [
-      { tier: 'Deluxe', price: '₹5,500', beds: 1 },
-      { tier: 'Premium', price: '₹8,000', beds: 2 },
-      { tier: 'Luxury', price: '₹12,000', beds: 2 },
+      { tier: 'Deluxe',  price: '₹5,500',  beds: 1 },
+      { tier: 'Premium', price: '₹8,000',  beds: 2 },
+      { tier: 'Luxury',  price: '₹12,000', beds: 2 },
     ],
-    includes: ['All Meals (Lunch + Dinner + Breakfast)','Welcome Drink','Evening Tea','AC Bedroom(s)','Overnight Mooring','Fishing Experience','Morning Sunrise Cruise'],
-    excludes: ['Alcoholic Beverages','Water Sports','Laundry'],
+    includes: ['All Meals (Lunch + Dinner + Breakfast)', 'Welcome Drink', 'Evening Tea', 'AC Bedroom(s)', 'Overnight Mooring', 'Fishing Experience', 'Morning Sunrise Cruise'],
     popular: true,
     desc: 'Our most popular package. Sleep aboard the houseboat, wake up to the serene sounds of the backwaters, and enjoy a full Kerala culinary experience.',
   },
@@ -40,13 +37,12 @@ const packages = [
     icon: '💕',
     name: 'Honeymoon Package',
     duration: '12:00 PM – 9:00 AM',
-    color: '#d97b8a',
+    color: 'var(--coral)',
     prices: [
-      { tier: 'Premium', price: '₹9,500', beds: 1 },
-      { tier: 'Luxury', price: '₹13,000', beds: 2 },
+      { tier: 'Premium', price: '₹9,500',  beds: 1 },
+      { tier: 'Luxury',  price: '₹13,000', beds: 2 },
     ],
-    includes: ['Rose Petal Decoration','Candlelight Dinner','Welcome Champagne / Juice','Honeymoon Cake','Special Turn-down Service','All Meals','Private Sun Deck','Couple Photography Session'],
-    excludes: ['Alcoholic Beverages (chargeable)'],
+    includes: ['Rose Petal Decoration', 'Candlelight Dinner', 'Welcome Champagne / Juice', 'Honeymoon Cake', 'Special Turn-down Service', 'All Meals', 'Private Sun Deck', 'Couple Photography Session'],
     popular: false,
     desc: 'A specially curated romantic experience for newlyweds. Floral décor, candlelight, special meals, and a private sunset cruise.',
   },
@@ -55,48 +51,59 @@ const packages = [
     icon: '👨‍👩‍👧‍👦',
     name: 'Group / Family Package',
     duration: 'Flexible Duration',
-    color: '#5a7a6a',
+    color: 'var(--jungle)',
     prices: [
       { tier: 'Family (3BR)', price: '₹15,000', beds: 3 },
-      { tier: 'Group (4BR)', price: '₹18,000', beds: 4 },
+      { tier: 'Group (4BR)',  price: '₹18,000', beds: 4 },
     ],
-    includes: ['Multiple Bedrooms','All Meals for Group','Dedicated Chef','Spacious Sun Deck','BBQ Night','Group Activities','Special Decoration on Request'],
-    excludes: ['Alcoholic Beverages','External Catering'],
+    includes: ['Multiple Bedrooms', 'All Meals for Group', 'Dedicated Chef', 'Spacious Sun Deck', 'BBQ Night', 'Group Activities', 'Special Decoration on Request'],
     popular: false,
     desc: 'Perfect for family gatherings, corporate outings, and large groups. Custom menus, spacious decks, and flexible arrangements.',
   },
 ]
 
 const addons = [
-  { name: 'Kerala Ayurvedic Massage',  price: '₹1,200/person' },
+  { name: 'Kerala Ayurvedic Massage',   price: '₹1,200/person' },
   { name: 'Sunset Photography Session', price: '₹2,500/couple' },
   { name: 'Kerala Cultural Performance', price: '₹3,000/show' },
-  { name: 'Private Fishing Trip',        price: '₹800/person' },
-  { name: 'Village Tour by Canoe',      price: '₹600/person' },
-  { name: 'BBQ Dinner Package',          price: '₹500/person' },
+  { name: 'Private Fishing Trip',        price: '₹800/person'  },
+  { name: 'Village Tour by Canoe',       price: '₹600/person'  },
+  { name: 'BBQ Dinner Package',          price: '₹500/person'  },
 ]
 
 export default function Packages() {
-//   const [selected, setSelected] = useState(null)
-
   return (
     <div className="packages-page">
+
+      {/* ── Hero ── */}
       <section className="page-hero">
-        <div className="page-hero-overlay" />
+        <div className="page-hero-pattern" />
         <div className="container">
-          <span className="section-label" style={{color:'var(--gold-light)'}}>Plans & Pricing</span>
-          <h1>Packages & Pricing</h1>
+          <nav className="breadcrumb">
+            <Link to="/">Home</Link>
+            <span className="breadcrumb-sep">/</span>
+            <span>Packages</span>
+          </nav>
+          <span className="section-label">Plans &amp; Pricing</span>
+          <h1>Packages &amp; Pricing</h1>
           <p>Transparent, all-inclusive pricing. No hidden charges. All packages include meals, crew, and a memorable backwater journey.</p>
         </div>
       </section>
 
-      {/* Package Cards */}
-      <section className="section section--cream">
+      {/* ── Package Cards ── */}
+      <section className="section section--sand">
         <div className="container">
           <div className="packages-grid">
             {packages.map(pkg => (
-              <div key={pkg.id} className={`pkg-card ${pkg.popular ? 'pkg-popular' : ''}`} style={{'--pkg-color': pkg.color}}>
-                {pkg.popular && <div className="pkg-popular-badge">⭐ Most Popular</div>}
+              <div
+                key={pkg.id}
+                className={`pkg-card ${pkg.popular ? 'pkg-popular' : ''}`}
+                style={{ '--pkg-color': pkg.color }}
+              >
+                {pkg.popular && (
+                  <div className="pkg-popular-badge">⭐ Most Popular</div>
+                )}
+
                 <div className="pkg-header">
                   <span className="pkg-icon">{pkg.icon}</span>
                   <div>
@@ -104,9 +111,9 @@ export default function Packages() {
                     <span className="pkg-duration">⏱ {pkg.duration}</span>
                   </div>
                 </div>
+
                 <p className="pkg-desc">{pkg.desc}</p>
 
-                {/* Price Tiers */}
                 <div className="pkg-tiers">
                   {pkg.prices.map(p => (
                     <div key={p.tier} className="pkg-tier">
@@ -116,17 +123,31 @@ export default function Packages() {
                   ))}
                 </div>
 
-                {/* Includes */}
                 <div className="pkg-includes">
-                  <strong>Includes:</strong>
+                  <strong>What's Included</strong>
                   <ul>
-                    {pkg.includes.map(i => <li key={i}><span className="inc-check">✓</span>{i}</li>)}
+                    {pkg.includes.map(item => (
+                      <li key={item}>
+                        <span className="inc-check">✓</span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
                 <div className="pkg-actions">
-                  <Link to="/contact" className="btn btn-primary" style={{flex:1, justifyContent:'center'}}>Book Now</Link>
-                  <a href="https://wa.me/917736262841" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark" style={{flex:1, justifyContent:'center'}}>WhatsApp</a>
+                  <Link to="/contact" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
+                    Book Now ↗
+                  </Link>
+                  <a
+                    href="https://wa.me/917736262841"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-dark"
+                    style={{ flex: 1, justifyContent: 'center' }}
+                  >
+                    WhatsApp
+                  </a>
                 </div>
               </div>
             ))}
@@ -134,14 +155,14 @@ export default function Packages() {
         </div>
       </section>
 
-      {/* Add-ons */}
+      {/* ── Add-ons ── */}
       <section className="section section--white">
         <div className="container">
           <div className="section-head">
             <span className="section-label">Extras</span>
             <h2>Optional Add-ons</h2>
-            <div className="gold-divider gold-divider--center" />
-            <p>Enhance your experience with these optional extras. Add them to any package.</p>
+            <div className="coral-divider coral-divider--center" />
+            <p>Enhance your adventure with these optional extras. Add them to any package.</p>
           </div>
           <div className="addons-grid">
             {addons.map(a => (
@@ -154,15 +175,15 @@ export default function Packages() {
         </div>
       </section>
 
-      {/* Price Note */}
-      <section className="section section--dark" style={{padding:'60px 0'}}>
+      {/* ── Price Notes ── */}
+      <div className="price-notes-band">
         <div className="container">
           <div className="price-notes">
             <div>
               <h3>Pricing Notes</h3>
-              <div className="gold-divider" />
+              <div className="coral-divider" />
               <ul className="notes-list">
-                <li>Prices are per houseboat (not per person)</li>
+                <li>Prices are per houseboat, not per person</li>
                 <li>Peak season (Oct–Feb) may have a 15–20% premium</li>
                 <li>GST of 5% applicable on all bookings</li>
                 <li>Free cancellation up to 48 hours before check-in</li>
@@ -170,15 +191,21 @@ export default function Packages() {
                 <li>Group discounts available for 5+ nights</li>
               </ul>
             </div>
+
             <div className="price-cta-box">
               <h3>Need a Custom Quote?</h3>
-              <p>Corporate groups, special occasions, or custom durations — we create bespoke packages.</p>
-              <Link to="/contact" className="btn btn-primary" style={{marginTop:20}}>Get Custom Quote</Link>
-              <a href="tel:+917736262841" className="btn btn-outline" style={{marginTop:10}}>📞 Call Now</a>
+              <p>Corporate groups, special occasions, or custom durations — we create bespoke packages tailored entirely to you.</p>
+              <Link to="/contact" className="btn btn-primary">
+                Get Custom Quote ↗
+              </Link>
+              <a href="tel:+917736262841" className="btn btn-outline">
+                📞 Call Us Now
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
     </div>
   )
 }

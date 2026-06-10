@@ -59,9 +59,11 @@ export default function Gallery() {
   return (
     <div className="gallery-page">
       <section className="page-hero">
-        <div className="page-hero-overlay" />
+        <div className="page-hero-pattern" />
+
+        <div className="page-hero-overlay" />x``
         <div className="container">
-          <span className="section-label" style={{ color: 'var(--gold-light)' }}>Visual Journey</span>
+          <span className="section-label">Visual Journey</span>
           <h1>Photo Gallery</h1>
           <p>A visual journey through Kerala's magical backwaters, our houseboats, and the experiences that await you.</p>
         </div>

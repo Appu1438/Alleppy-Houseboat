@@ -18,10 +18,12 @@ export default function Houseboats() {
     return (
         <div className="houseboats-page">
             {/* Page Hero */}
+
             <section className="page-hero">
+                <div className="page-hero-pattern" />
                 <div className="page-hero-overlay" />
                 <div className="container">
-                    <span className="section-label" style={{ color: 'var(--gold-light)' }}>Our Fleet</span>
+                    <span className="section-label" >Our Fleet</span>
                     <h1>Kerala Houseboats</h1>
                     <p>Choose from our curated fleet of certified, comfortable houseboats — each offering a unique way to experience Alleppey's backwaters.</p>
                 </div>
@@ -104,11 +106,11 @@ export default function Houseboats() {
             </section>
 
             {/* CTA */}
-            <section className="section section--dark" style={{ textAlign: 'center' }}>
+            <section className="section section--ocean" style={{ textAlign: 'center' }}>
                 <div className="container">
                     <h2>Can't Decide? Let Us Help!</h2>
                     <div className="gold-divider gold-divider--center" />
-                    <p style={{ margin: '0 auto 32px', color: 'rgba(250,246,238,0.7)' }}>
+                    <p style={{ margin: '10px auto 35px', color: `var(--white)` }}>
                         Call or WhatsApp us and our team will recommend the perfect houseboat based on your group size, budget, and preferences.
                     </p>
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
