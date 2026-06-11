@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import './home.css'
-import { featuredBoats } from '../../themes/constants/boats/featuredBoats'
+import { boats } from '../../themes/constants/boats/boats'
 
 /* ── Hero carousel slides ── */
 const heroSlides = [
@@ -49,14 +49,14 @@ const testimonials = [
     name: 'Priya & Arjun Nair',
     from: 'Bangalore',
     rating: 5,
-    text: 'Our honeymoon on the Blossom Retreat was absolutely magical. The sunsets over the backwaters, the food, the crew — everything was perfect. We will cherish this forever.',
+    text: 'Our honeymoon on the Alleppey Houseboat was absolutely magical. The sunsets over the backwaters, the food, the crew — everything was perfect. We will cherish this forever.',
     type: 'Honeymoon Package',
   },
   {
     name: 'Rohan Mehta',
     from: 'Mumbai',
     rating: 5,
-    text: 'Booked the Royal Lotus for a family trip. The kids loved every minute. The boat was spotlessly clean, crew was warm and the food was incredible. 10/10 recommend!',
+    text: 'Booked the Alleppey Houseboat for a family trip. The kids loved every minute. The boat was spotlessly clean, crew was warm and the food was incredible. 10/10 recommend!',
     type: 'Luxury Package',
   },
   {
@@ -80,6 +80,21 @@ const introFeatures = [
   { icon: '🌅', title: 'Sunset & Sunrise Cruises', desc: 'Experience Kerala\'s legendary golden light from the water.' },
   { icon: '🎣', title: 'Traditional Fishing Experiences', desc: 'Watch Chinese fishing nets and cast your own line at dawn.' },
 ]
+
+const boatColors = {
+  Deluxe: "#5a7a6a",
+  Premium: "#2a8a82",
+  Luxury: "#c9973a",
+}
+
+const randomBoats = [...boats];
+
+for (let i = randomBoats.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [randomBoats[i], randomBoats[j]] = [randomBoats[j], randomBoats[i]];
+}
+
+const displayedBoats = randomBoats.slice(0, 4);
 
 /* ── Scroll-reveal hook ── */
 function useScrollReveal() {
@@ -301,7 +316,7 @@ export default function Home() {
           </div>
 
           <div className="featured-grid">
-            {featuredBoats.map((boat, i) => (
+            {displayedBoats.map((boat, i) => (
               <div
                 key={boat.id}
                 className={`boat-card reveal reveal-d${(i % 4) + 1}`}
@@ -309,8 +324,14 @@ export default function Home() {
                 <div className="boat-card-image" style={{ '--accent': boat.color }}>
                   <img src={boat.image} alt={boat.name} />
                   {boat.tag && <span className="boat-tag">{boat.tag}</span>}
-                  <span className="boat-type-badge" style={{ background: boat.color }}>{boat.type}</span>
-                </div>
+                  <span
+                    className="boat-type-badge"
+                    style={{
+                      background: boatColors[boat.type] || "#666"
+                    }}
+                  >
+                    {boat.type}
+                  </span>                </div>
                 <div className="boat-card-body">
                   <div className="boat-meta">
                     <span>🛏 {boat.bedrooms} Bedroom{boat.bedrooms > 1 ? 's' : ''}</span>
@@ -460,7 +481,7 @@ export default function Home() {
             <div className="cta-band-actions reveal-right">
               <Link to="/contact" className="btn btn-primary">Book Now</Link>
               <a
-                href="https://wa.me/917736262841"
+                href="https://wFa.me/917736262841"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"

@@ -19,12 +19,17 @@ export default function HouseboatDetail() {
   const carouselRef = useRef(null)
   const autoTimer = useRef(null)
   const [carouselIdx, setCarouselIdx] = useState(0)
+  const stripRef = useRef(null)
 
   const scrollTo = useCallback((idx) => {
     const el = carouselRef.current
     if (!el) return
-    const slide = el.children[idx]
-    if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+
+    el.scrollTo({
+      left: idx * el.offsetWidth,
+      behavior: 'smooth'
+    })
+
     setCarouselIdx(idx)
   }, [])
 
@@ -32,12 +37,18 @@ export default function HouseboatDetail() {
   const nextCarousel = useCallback(() => {
     setCarouselIdx(prev => {
       const next = (prev + 1) % allImages.length
+
       const el = carouselRef.current
-      if (el && el.children[next]) {
-        el.children[next].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+      if (el) {
+        el.scrollTo({
+          left: next * el.offsetWidth,
+          behavior: 'smooth'
+        })
       }
+
       return next
     })
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   }, [allImages.length])
 
   useEffect(() => {
@@ -55,6 +66,14 @@ export default function HouseboatDetail() {
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Sync active thumbnail into view in the strip
+  useEffect(() => {
+    const strip = stripRef.current
+    if (!strip) return
+    const thumb = strip.children[activeImg]
+    if (thumb) thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' })
+  }, [activeImg])
 
   const pauseAuto = useCallback(() => {
     clearInterval(autoTimer.current)
@@ -97,6 +116,7 @@ export default function HouseboatDetail() {
 
               {/* ── DESKTOP: Premium Gallery ── */}
               <div className="gallery-desktop">
+                {/* Main image */}
                 <div className="gallery-main" onClick={() => setLightbox(true)}>
                   <img
                     src={allImages[activeImg]}
@@ -105,7 +125,8 @@ export default function HouseboatDetail() {
                   />
                   <div className="gallery-main-overlay">
                     <span className="gallery-expand-btn">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                        strokeLinecap="round" strokeLinejoin="round" width="15" height="15">
                         <path d="M8 3H5a2 2 0 00-2 2v3M21 8V5a2 2 0 00-2-2h-3M16 21h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3" />
                       </svg>
                       View All Photos
@@ -114,7 +135,8 @@ export default function HouseboatDetail() {
                   </div>
                 </div>
 
-                <div className="gallery-strip">
+                {/* Thumbnail strip — scrollable, never overflows */}
+                <div className="gallery-strip" ref={stripRef}>
                   {allImages.map((src, i) => (
                     <button
                       key={i}
@@ -123,6 +145,7 @@ export default function HouseboatDetail() {
                       aria-label={`View image ${i + 1}`}
                     >
                       <img src={src} alt={`${boat.name} thumbnail ${i + 1}`} />
+                      {i === activeImg && <span className="thumb-active-ring" />}
                     </button>
                   ))}
                 </div>
@@ -188,12 +211,19 @@ export default function HouseboatDetail() {
                   <h3>About {boat.name}</h3>
                   <p>{boat.desc}</p>
                   <div className="quick-facts">
-                    <div className="fact-item"><span>🛏</span><strong>{boat.bedrooms} Bedroom{boat.bedrooms > 1 ? 's' : ''}</strong></div>
-                    <div className="fact-item"><span>🍽</span><strong>All Meals Included</strong></div>
-                    <div className="fact-item"><span>👨‍✈️</span><strong>Experienced Crew</strong></div>
-                    <div className="fact-item"><span>❄️</span><strong>Full AC</strong></div>
-                    <div className="fact-item"><span>🌊</span><strong>Backwater Route</strong></div>
-                    <div className="fact-item"><span>🏆</span><strong>DTPC Certified</strong></div>
+                    {[
+                      { icon: '🛏', label: `${boat.bedrooms} Bedroom${boat.bedrooms > 1 ? 's' : ''}` },
+                      { icon: '🍽', label: 'All Meals Included' },
+                      { icon: '👨‍✈️', label: 'Experienced Crew' },
+                      { icon: '❄️', label: 'Full AC' },
+                      { icon: '🌊', label: 'Backwater Route' },
+                      { icon: '🏆', label: 'DTPC Certified' },
+                    ].map(({ icon, label }) => (
+                      <div className="fact-item" key={label}>
+                        <span>{icon}</span>
+                        <strong>{label}</strong>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
@@ -259,23 +289,25 @@ export default function HouseboatDetail() {
               <div className="sidebar-card">
                 <div className="sidebar-card-header">
                   <div>
-                    <h3>Book This Houseboat</h3>
-                    <p className="sidebar-tagline">{boat.type} · DTPC Certified</p>
+                    <div className="sidebar-eyebrow">{boat.type} · DTPC Certified</div>
+                    <h3>Reserve This Houseboat</h3>
                   </div>
                   <div className="sidebar-rating">
-                    <span>⭐</span>
+                    <span className="star-icon">★</span>
                     <strong>4.9</strong>
+                    <span className="rating-count">/ 5</span>
                   </div>
                 </div>
 
-                <div className="coral-divider" />
-
-                <div className="sidebar-price">
-                  <strong>{boat.price}</strong>
-                  <span>per night · All meals included</span>
+                <div className="sidebar-price-row">
+                  <div>
+                    <strong className="sidebar-price-amount">{boat.price}</strong>
+                    <span className="sidebar-price-label">per night</span>
+                  </div>
+                  <span className="sidebar-meals-badge">All meals included</span>
                 </div>
 
-                <form onSubmit={e => e.preventDefault()}>
+                <div className="sidebar-form">
                   <div className="form-row-2">
                     <div className="form-group">
                       <label>Your Name</label>
@@ -294,16 +326,16 @@ export default function HouseboatDetail() {
                     <div className="form-group">
                       <label>Package</label>
                       <select>
-                        <option>Day Cruise (12pm - 5pm)</option>
-                        <option>Overnight Stay (12pm - 9am)</option>
-                        <option>Night Stay (5pm - 9am)</option>
+                        <option>Day Cruise (12pm – 5pm)</option>
+                        <option>Overnight Stay (12pm – 9am)</option>
+                        <option>Night Stay (5pm – 9am)</option>
                       </select>
                     </div>
                   </div>
-                  <button className="btn btn-primary sidebar-submit" type="submit">
+                  <button className="btn btn-primary sidebar-submit" type="button">
                     Send Enquiry
                   </button>
-                </form>
+                </div>
 
                 <a
                   href="https://wa.me/917736262841"
@@ -319,22 +351,20 @@ export default function HouseboatDetail() {
               </div>
 
               <div className="sidebar-info">
-                <div className="info-row">
-                  <span>📍</span>
-                  <div><strong>Location</strong><span>Alleppey Finishing Point</span></div>
-                </div>
-                <div className="info-row">
-                  <span>⏰</span>
-                  <div><strong>Check-in / Out</strong><span>12 PM / 9 AM (Overnight)</span></div>
-                </div>
-                <div className="info-row">
-                  <span>🍽</span>
-                  <div><strong>Meals</strong><span>Breakfast, Lunch &amp; Dinner included</span></div>
-                </div>
-                <div className="info-row">
-                  <span>🔄</span>
-                  <div><strong>Cancellation</strong><span>Free up to 48 hrs before</span></div>
-                </div>
+                {[
+                  { icon: '📍', label: 'Boarding Point', value: 'Alleppey' },
+                  { icon: '⏰', label: 'Check-in / Out', value: '12 PM / 9 AM (Overnight)' },
+                  { icon: '🍽', label: 'Meals', value: 'Breakfast, Lunch & Dinner' },
+                  { icon: '🔄', label: 'Cancellation', value: 'Free up to 48 hrs before' },
+                ].map(({ icon, label, value }) => (
+                  <div className="info-row" key={label}>
+                    <span className="info-icon">{icon}</span>
+                    <div>
+                      <strong>{label}</strong>
+                      <span>{value}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </aside>
 
@@ -345,7 +375,7 @@ export default function HouseboatDetail() {
       {/* ── Lightbox ── */}
       {lightboxOpen && (
         <div className="lightbox" onClick={() => setLightbox(false)}>
-          <button className="lightbox-close" onClick={() => setLightbox(false)}>✕</button>
+          <button className="lightbox-close" onClick={() => setLightbox(false)} aria-label="Close">✕</button>
           <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
             <img src={allImages[activeImg]} alt={boat.name} />
             <div className="lightbox-nav">

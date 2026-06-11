@@ -1,40 +1,60 @@
 @import '../../assets/css/shared.css';
 
 /* =====================================================
-   HOUSEBOATS PAGE
+   HOUSEBOATS PAGE  —  Premium Redesign
    ===================================================== */
 
+/* ── Grid ────────────────────────────────────────────── */
 .boats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
+/* ── Card shell ──────────────────────────────────────── */
 .boat-listing-card {
+  --card-accent: var(--teal-mid);          /* overridden per-card via inline style */
+
   background: var(--white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  transition: transform var(--dur), box-shadow var(--dur);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+}
+
+/* Accent bar that grows on hover — using the boat's own type color */
+.boat-listing-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .boat-listing-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
 }
 
+.boat-listing-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Image block ─────────────────────────────────────── */
 .blc-image {
   position: relative;
-  background: linear-gradient(135deg,
-      color-mix(in srgb, var(--accent, var(--teal-mid)) 20%, var(--cream-dark)),
-      color-mix(in srgb, var(--accent, var(--teal-mid)) 10%, var(--cream)));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
+  height: 220px;
   overflow: hidden;
+  background: #1a2a28;   /* dark fallback so no flash */
 }
 
 .blc-image img {
@@ -42,109 +62,150 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.blc-placeholder {
-  color: var(--accent, var(--teal-mid));
-  opacity: 0.65;
+.boat-listing-card:hover .blc-image img {
+  transform: scale(1.05);
 }
 
-.blc-placeholder svg {
-  width: 160px;
-  height: 110px;
+/* Subtle dark vignette at bottom of image — makes badges readable */
+.blc-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(10, 20, 18, 0.55) 100%
+  );
+  pointer-events: none;
 }
 
+/* Tag  (e.g. "Best Seller") */
 .blc-tag {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--coral);
-  color: var(--white);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: var(--coral, #e8604c);
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 8px;
+  padding: 5px 11px;
+  border-radius: 3px;
 }
 
+/* Type badge (Deluxe / Premium / Luxury) */
 .blc-type {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  color: white;
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  bottom: 14px;
+  right: 14px;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 2px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  /* background comes from inline style */
 }
 
+/* ── Body ────────────────────────────────────────────── */
 .blc-body {
-  padding: 24px;
+  padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  gap: 0;
 }
 
 .blc-body h3 {
-  margin-bottom: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  color: var(--text-dark, #1a2a28);
+  line-height: 1.25;
 }
 
+.blc-body > p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Amenity chips ───────────────────────────────────── */
 .blc-amenities {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .blc-amenities span {
-  font-size: 0.75rem;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  background: var(--cream);
-  padding: 4px 10px;
-  border-radius: 2px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 4px 9px;
+  border-radius: 3px;
+  white-space: nowrap;
 }
 
+/* ── Footer ──────────────────────────────────────────── */
 .blc-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-  border-top: 1px solid var(--cream-dark);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 18px;
   padding-top: 16px;
 }
 
+/* Price */
 .blc-price {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
-  color: var(--teal-deep);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--teal-deep, #0d3b35);
 }
 
 .blc-unit {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
+  letter-spacing: 0.02em;
 }
 
+/* Actions */
 .blc-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
-@media (max-width: 1100px) {
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 1200px) {
   .boats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 700px) {
-  .boat-listing-card {
+@media (max-width: 680px) {
+  .boats-grid {
     grid-template-columns: 1fr;
   }
 
   .blc-image {
-    min-height: 180px;
+    height: 200px;
   }
 }

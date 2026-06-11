@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../assets/css/shared.css'
 import './seo.css'
-import { luxuryBoats } from '../../themes/constants/boats/luxuryBoats'
 
 const luxuryFeatures = [
   { icon: '🛏', title: 'Premium Bedrooms', desc: 'Teak-wood furnished AC cabins with king-size beds, fine linen, and plush pillows.' },
@@ -160,7 +159,7 @@ export default function LuxuryHouseboats() {
       </section>
 
       {/* ── Luxury Fleet ── */}
-      <section className="section section--ocean">
+      {/* <section className="section section--ocean">
         <div className="container">
           <div className="section-head">
             <span className="section-label" style={{ color: 'var(--coral-light)' }}>Our Luxury Fleet</span>
@@ -187,7 +186,7 @@ export default function LuxuryHouseboats() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── FAQ ── */}
       <section className="section section--white">
