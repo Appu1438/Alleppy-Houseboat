@@ -86,7 +86,7 @@ export const boatData = {
     desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
 
     amenities: [
-      '4 Air Conditioned Bedrooms',
+      '2 Conditioned Bedrooms',
       'Private Upper Deck',
       'Attached Bathrooms',
       'Traditional Kerala Meals',
@@ -126,7 +126,7 @@ export const boatData = {
       },
       {
         label: 'Night Stay',
-        price: '₹9,000',
+        price: '₹8,000',
         dur: '5 PM - 9 AM',
         inc: 'Tea + Dinner + Breakfast'
       },
@@ -154,7 +154,7 @@ export const boatData = {
     desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
 
     amenities: [
-      '4 Air Conditioned Bedrooms',
+      '2 Conditioned Bedrooms',
       'Private Upper Deck',
       'Attached Bathrooms',
       'Traditional Kerala Meals',
@@ -194,7 +194,7 @@ export const boatData = {
       },
       {
         label: 'Night Stay',
-        price: '₹9,000',
+        price: '₹8,000',
         dur: '5 PM - 9 AM',
         inc: 'Tea + Dinner + Breakfast'
       },
@@ -220,7 +220,7 @@ export const boatData = {
     desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
 
     amenities: [
-      '4 Air Conditioned Bedrooms',
+      '3 Air Conditioned Bedrooms',
       'Private Upper Deck',
       'Attached Bathrooms',
       'Traditional Kerala Meals',
@@ -284,7 +284,7 @@ export const boatData = {
     desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
 
     amenities: [
-      '4 Air Conditioned Bedrooms',
+      '1 Air Conditioned Bedrooms',
       'Private Upper Deck',
       'Attached Bathrooms',
       'Traditional Kerala Meals',
@@ -355,7 +355,7 @@ export const boatData = {
     desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
 
     amenities: [
-      '4 Air Conditioned Bedrooms',
+      '7 Conditioned Bedrooms',
       'Private Upper Deck',
       'Attached Bathrooms',
       'Traditional Kerala Meals',
@@ -395,7 +395,7 @@ export const boatData = {
       },
       {
         label: 'Night Stay',
-        price: '₹9,000',
+        price: '₹8,000',
         dur: '5 PM - 9 AM',
         inc: 'Tea + Dinner + Breakfast'
       },
