@@ -294,14 +294,14 @@ export default function HouseboatDetail() {
                     <div className="form-group">
                       <label>Package</label>
                       <select>
-                        <option>Day Cruise</option>
-                        <option>Overnight Stay</option>
-                        <option>Two Nights</option>
+                        <option>Day Cruise (12pm - 5pm)</option>
+                        <option>Overnight Stay (12pm - 9am)</option>
+                        <option>Night Stay (5pm - 9am)</option>
                       </select>
                     </div>
                   </div>
                   <button className="btn btn-primary sidebar-submit" type="submit">
-                    Send Enquiry ↗
+                    Send Enquiry
                   </button>
                 </form>
 
