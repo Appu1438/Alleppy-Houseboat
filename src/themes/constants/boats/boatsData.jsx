@@ -1,6 +1,3 @@
-// const demoImage =
-//   "https://res.cloudinary.com/stark-and-nfly/image/upload/v1780586906/one-bedroom-premium-houseboat-alleppey_n6fvfp.jpg";
-
 export const boatData = {
   'ahb-001': {
     name: 'AHB-001',
@@ -14,34 +11,34 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/IMG-20260603-WA0025.jpg_wewxmw.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/IMG-20260603-WA0029.jpg_bhsnlg.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/IMG-20260603-WA0031.jpg_lpjqwf.jpg",
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'Crafted for family gatherings and group escapes, AHB-001 offers spacious interiors, a scenic upper deck and a peaceful cruise through the iconic backwaters of Alleppey. Freshly prepared Kerala dishes and attentive onboard service make every moment memorable.',
 
     amenities: [
       '4 Air Conditioned Bedrooms',
+      'Large Family Lounge',
       'Private Upper Deck',
-      'Attached Bathrooms',
-      'Traditional Kerala Meals',
-      'Welcome Drink',
-      'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
-      'Life Jackets',
-      'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'Attached Modern Bathrooms',
+      'Traditional Kerala Cuisine',
+      'Evening Tea & Snacks',
+      'Open Dining Space',
+      'Professional Crew',
+      'Safety Equipment',
+      'LED TV',
+      'Music System',
+      'Village Canal Cruise'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
+      { time: '12:00 PM', event: 'Welcome & Boarding' },
+      { time: '01:00 PM', event: 'Kerala Lunch Served' },
+      { time: '02:30 PM', event: 'Cruise Across Vembanad Lake' },
+      { time: '04:30 PM', event: 'Tea with Local Snacks' },
+      { time: '05:45 PM', event: 'Sunset Photography Stop' },
       { time: '07:30 PM', event: 'Dinner on Board' },
-      { time: '08:00 AM', event: 'Breakfast' },
+      { time: '08:30 AM', event: 'Traditional Breakfast' },
       { time: '09:00 AM', event: 'Checkout' },
     ],
 
@@ -50,22 +47,23 @@ export const boatData = {
         label: 'Day Cruise',
         price: '₹10,000',
         dur: '12 PM - 5 PM',
-        inc: 'Lunch + Tea'
+        inc: 'Lunch + Tea & Snacks'
       },
       {
         label: 'Overnight Cruise',
         price: '₹12,000',
         dur: '12 PM - 9 AM',
-        inc: 'All Meals'
+        inc: 'All Meals + Stay'
       },
       {
-        label: 'Night Stay',
+        label: 'Evening Stay',
         price: '₹10,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
       },
     ],
   },
+
   'ahb-002': {
     name: 'AHB-002',
     type: 'Deluxe',
@@ -80,62 +78,63 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781176043/IMG-20251216-WA0024.jpg_itmgz3.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781176044/IMG-20251216-WA0026.jpg_joaktt.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781176045/IMG-20251216-WA0028.jpg_ewmnaw.jpg",
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'Perfect for couples and small families, AHB-002 combines traditional charm with comfortable living spaces. Relax under the shade of coconut trees and experience the calm rhythm of Kerala backwaters.',
 
     amenities: [
-      '2 Conditioned Bedrooms',
-      'Private Upper Deck',
+      '2 Comfortable Bedrooms',
+      'Covered Sit-out Area',
       'Attached Bathrooms',
-      'Traditional Kerala Meals',
+      'Fresh Home-style Meals',
       'Welcome Drink',
-      'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
+      'Tea & Banana Fritters',
+      'Dining Space',
+      'Friendly Crew',
       'Life Jackets',
-      'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'Television',
+      'Fishing Activity',
+      'Village Sightseeing'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
-      { time: '07:30 PM', event: 'Dinner on Board' },
+      { time: '12:00 PM', event: 'Boarding at Alleppey' },
+      { time: '01:15 PM', event: 'Traditional Lunch' },
+      { time: '02:00 PM', event: 'Cruise Through Village Canals' },
+      { time: '04:00 PM', event: 'Tea & Snacks' },
+      { time: '06:00 PM', event: 'Anchoring Time' },
+      { time: '07:30 PM', event: 'Dinner Service' },
       { time: '08:00 AM', event: 'Breakfast' },
-      { time: '09:00 AM', event: 'Checkout' },
+      { time: '09:00 AM', event: 'Departure' },
     ],
 
     packages: [
       {
-        label: 'Day Cruise',
+        label: 'Backwater Day Trip',
         price: '₹8,000',
         dur: '12 PM - 5 PM',
-        inc: 'Lunch + Tea'
+        inc: 'Lunch + Refreshments'
       },
       {
-        label: 'Overnight Cruise',
+        label: 'Classic Overnight',
         price: '₹9,000',
         dur: '12 PM - 9 AM',
-        inc: 'All Meals'
+        inc: 'Stay + All Meals'
       },
       {
-        label: 'Night Stay',
+        label: 'Sunset & Stay',
         price: '₹8,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
       },
     ],
   },
+
   'ahb-003': {
-    name: 'AHB-002',
+    name: 'AHB-003',
     type: 'Deluxe',
-    bedrooms: 2,
+    bedrooms: 3,
     price: '₹9,000',
     image: "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781179273/IMG-20260518-WA0038.jpg_verhuy.jpg",
     images: [
@@ -148,58 +147,59 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781179257/IMG-20250829-WA0018.jpg_ybz4vw.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781179255/IMG-20260505-WA0030.jpg_vtshf7.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781179254/IMG-20260505-WA0036.jpg_dapzm3.jpg",
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'AHB-003 is designed for relaxed family holidays with spacious cabins, beautiful lake views and a tranquil atmosphere. Watch local life unfold as you cruise through picturesque waterways.',
 
     amenities: [
-      '2 Conditioned Bedrooms',
-      'Private Upper Deck',
-      'Attached Bathrooms',
-      'Traditional Kerala Meals',
-      'Welcome Drink',
-      'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
-      'Life Jackets',
+      '3 Spacious Bedrooms',
+      'Traditional Wooden Interiors',
+      'Private Dining Area',
+      'Attached Washrooms',
+      'Kerala Style Meals',
+      'Welcome Juice',
+      'Evening Snacks',
+      'Experienced Boat Crew',
+      'Safety Gear',
       'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'Backwater Fishing',
+      'Open Air Deck'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
-      { time: '07:30 PM', event: 'Dinner on Board' },
-      { time: '08:00 AM', event: 'Breakfast' },
+      { time: '12:00 PM', event: 'Arrival & Check-in' },
+      { time: '01:00 PM', event: 'Lunch Buffet' },
+      { time: '02:15 PM', event: 'Cruise Through Paddy Fields' },
+      { time: '04:15 PM', event: 'Tea Break' },
+      { time: '06:00 PM', event: 'Evening Halt' },
+      { time: '07:30 PM', event: 'Dinner' },
+      { time: '08:30 AM', event: 'Breakfast' },
       { time: '09:00 AM', event: 'Checkout' },
     ],
 
     packages: [
       {
-        label: 'Day Cruise',
+        label: 'Village Cruise',
         price: '₹8,000',
         dur: '12 PM - 5 PM',
         inc: 'Lunch + Tea'
       },
       {
-        label: 'Overnight Cruise',
+        label: 'Family Overnight',
         price: '₹9,000',
         dur: '12 PM - 9 AM',
         inc: 'All Meals'
       },
       {
-        label: 'Night Stay',
+        label: 'Moonlight Stay',
         price: '₹8,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
       },
     ],
   },
+
   'ahb-004': {
     name: 'AHB-004',
     type: 'Premium',
@@ -214,55 +214,55 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203238/IMG-20260505-WA0043.jpg_zr1cy4.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203238/IMG-20260505-WA0028.jpg_n7jomf.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203239/IMG-20260505-WA0029.jpg_e5vqgv.jpg"
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'A premium backwater retreat featuring elegant interiors, comfortable cabins and a spacious rooftop deck. AHB-004 is ideal for travellers seeking a blend of luxury and authentic Kerala experiences.',
 
     amenities: [
       '3 Air Conditioned Bedrooms',
-      'Private Upper Deck',
-      'Attached Bathrooms',
-      'Traditional Kerala Meals',
+      'Premium Upper Deck',
+      'Luxury Washrooms',
+      'Chef Prepared Meals',
       'Welcome Drink',
-      'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
-      'Life Jackets',
-      'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'Coffee & Snacks',
+      'Dining Lounge',
+      'Professional Captain & Crew',
+      'Life Saving Equipment',
+      'LED Television',
+      'Bluetooth Music',
+      'Sunset Cruise Experience'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
-      { time: '07:30 PM', event: 'Dinner on Board' },
-      { time: '08:00 AM', event: 'Breakfast' },
+      { time: '12:00 PM', event: 'Welcome Aboard' },
+      { time: '01:00 PM', event: 'Lunch Service' },
+      { time: '02:00 PM', event: 'Premium Backwater Cruise' },
+      { time: '04:00 PM', event: 'Tea & Snacks' },
+      { time: '05:45 PM', event: 'Sunset Viewing' },
+      { time: '07:30 PM', event: 'Dinner' },
+      { time: '08:30 AM', event: 'Breakfast' },
       { time: '09:00 AM', event: 'Checkout' },
     ],
 
     packages: [
       {
-        label: 'Day Cruise',
+        label: 'Premium Day Cruise',
         price: '₹10,000',
         dur: '12 PM - 5 PM',
-        inc: 'Lunch + Tea'
+        inc: 'Lunch + Evening Tea'
       },
       {
-        label: 'Overnight Cruise',
+        label: 'Luxury Overnight',
         price: '₹12,000',
         dur: '12 PM - 9 AM',
-        inc: 'All Meals'
+        inc: 'All Meals + Stay'
       },
       {
-        label: 'Night Stay',
+        label: 'Evening Escape',
         price: '₹10,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
       },
     ],
   },
@@ -278,58 +278,59 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203991/IMG-20230322-WA0007.jpg_fzsa95.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203992/IMG-20230904-WA0040.jpg_isef4a.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203992/IMG-20230904-WA0035.jpg_uqmy6c.jpg"
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'Designed especially for honeymooners and couples, AHB-005 offers privacy, peaceful surroundings and romantic backwater views. Enjoy quality time together with delicious cuisine and a relaxing overnight cruise.',
 
     amenities: [
-      '1 Air Conditioned Bedrooms',
-      'Private Upper Deck',
-      'Attached Bathrooms',
-      'Traditional Kerala Meals',
+      '1 Air Conditioned Bedroom',
+      'Private Candle Light Dining',
+      'Upper Deck Seating',
+      'Attached Luxury Bathroom',
+      'Fresh Kerala Cuisine',
       'Welcome Drink',
       'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
-      'Life Jackets',
-      'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'Dedicated Crew',
+      'Safety Equipment',
+      'LED TV',
+      'Bluetooth Speaker',
+      'Romantic Sunset Cruise'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
-      { time: '07:30 PM', event: 'Dinner on Board' },
-      { time: '08:00 AM', event: 'Breakfast' },
+      { time: '12:00 PM', event: 'Private Welcome & Boarding' },
+      { time: '01:00 PM', event: 'Special Couple Lunch' },
+      { time: '02:30 PM', event: 'Backwater Cruise' },
+      { time: '04:30 PM', event: 'Tea & Snacks' },
+      { time: '06:00 PM', event: 'Anchoring Point' },
+      { time: '07:30 PM', event: 'Dinner Under the Stars' },
+      { time: '08:30 AM', event: 'Breakfast' },
       { time: '09:00 AM', event: 'Checkout' },
     ],
 
     packages: [
       {
-        label: 'Day Cruise',
+        label: 'Romantic Day Cruise',
         price: '₹10,000',
         dur: '12 PM - 5 PM',
         inc: 'Lunch + Tea'
       },
       {
-        label: 'Overnight Cruise',
+        label: 'Couple Overnight',
         price: '₹12,000',
         dur: '12 PM - 9 AM',
         inc: 'All Meals'
       },
       {
-        label: 'Night Stay',
+        label: 'Sunset Stay',
         price: '₹10,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
       },
     ],
   },
+
   'ahb-006': {
     name: 'AHB-006',
     type: 'Deluxe',
@@ -349,55 +350,195 @@ export const boatData = {
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781204494/IMG-20230921-WA0013.jpg_ckczuo.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781204494/IMG-20230921-WA0023.jpg_kb46it.jpg",
       "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781204494/IMG-20230921-WA0017.jpg_v5erfc.jpg"
-      // "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173519/kerahouseboatsinfo.com-food-menu1-day-cruise-deluxe-menu.jpg_cy2utl.jpg"
     ],
 
-    desc: 'Experience the beauty of Alappuzha backwaters aboard our luxury houseboat. Cruise through Vembanad Lake, narrow village canals, paddy fields, and coconut-lined waterways while enjoying authentic Kerala hospitality and freshly prepared traditional cuisine.',
+    desc:
+      'AHB-006 is a spacious group houseboat ideal for celebrations, corporate outings and large family vacations. Wide decks and comfortable cabins provide a memorable backwater experience.',
 
     amenities: [
-      '7 Conditioned Bedrooms',
-      'Private Upper Deck',
+      '7 Comfortable Bedrooms',
+      'Large Party Deck',
       'Attached Bathrooms',
-      'Traditional Kerala Meals',
+      'Traditional Kerala Buffet',
       'Welcome Drink',
-      'Tea & Evening Snacks',
-      'Dining Area',
-      'Experienced Crew',
+      'Tea & Snacks',
+      'Dining Hall',
+      'Professional Crew',
       'Life Jackets',
-      'TV',
-      'Wi-Fi (Limited Areas)',
-      'Fishing Experience'
+      'LED TV',
+      'Music System',
+      'Group Activities'
     ],
 
     itinerary: [
-      { time: '12:00 PM', event: 'Check-in at Alleppey Boarding Point' },
-      { time: '01:00 PM', event: 'Traditional Kerala Lunch' },
-      { time: '02:00 PM', event: 'Cruise through Vembanad Backwaters' },
-      { time: '04:00 PM', event: 'Tea & Kerala Snacks' },
-      { time: '06:00 PM', event: 'Anchoring as per Government Rules' },
-      { time: '07:30 PM', event: 'Dinner on Board' },
-      { time: '08:00 AM', event: 'Breakfast' },
+      { time: '12:00 PM', event: 'Group Check-in' },
+      { time: '01:00 PM', event: 'Lunch Buffet' },
+      { time: '02:00 PM', event: 'Lake Cruise' },
+      { time: '04:00 PM', event: 'Tea Break' },
+      { time: '06:00 PM', event: 'Evening Halt' },
+      { time: '07:30 PM', event: 'Dinner' },
+      { time: '08:30 AM', event: 'Breakfast' },
       { time: '09:00 AM', event: 'Checkout' },
     ],
 
     packages: [
       {
-        label: 'Day Cruise',
+        label: 'Group Day Cruise',
         price: '₹8,000',
         dur: '12 PM - 5 PM',
         inc: 'Lunch + Tea'
       },
       {
-        label: 'Overnight Cruise',
+        label: 'Family Overnight',
         price: '₹9,000',
         dur: '12 PM - 9 AM',
         inc: 'All Meals'
       },
       {
-        label: 'Night Stay',
+        label: 'Evening Celebration',
         price: '₹8,000',
         dur: '5 PM - 9 AM',
-        inc: 'Tea + Dinner + Breakfast'
+        inc: 'Dinner + Breakfast'
+      },
+    ],
+  },
+
+  'ahb-007': {
+    name: 'AHB-007',
+    type: 'Premium',
+    bedrooms: 2,
+    price: '₹12,000',
+    image: "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239989/IMG-20260401-WA0005.jpg_ewn5w5.jpg",
+    images: [
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239991/IMG-20260401-WA0012.jpg_wr490f.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239990/IMG-20260401-WA0007.jpg_n2kmf8.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239994/IMG-20260401-WA0010.jpg_njq5fw.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239995/IMG-20260401-WA0013.jpg_qrskj2.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239998/IMG-20260401-WA0006.jpg_bl3ejz.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239993/IMG-20260401-WA0009.jpg_zpj7p4.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781239990/IMG-20260401-WA0014.jpg_gt2m6w.jpg"
+    ],
+
+    desc:
+      'Enjoy a premium cruise with elegant interiors, spacious cabins and uninterrupted lake views. AHB-007 is ideal for couples and small families seeking comfort and privacy.',
+
+    amenities: [
+      '2 Premium AC Bedrooms',
+      'Upper Viewing Deck',
+      'Luxury Bathrooms',
+      'Chef Prepared Meals',
+      'Welcome Drink',
+      'Coffee & Snacks',
+      'Dining Lounge',
+      'Experienced Crew',
+      'Safety Gear',
+      'Smart TV',
+      'Bluetooth Audio',
+      'Sunrise Cruise'
+    ],
+
+    itinerary: [
+      { time: '12:00 PM', event: 'Boarding' },
+      { time: '01:00 PM', event: 'Lunch' },
+      { time: '02:15 PM', event: 'Village Canal Cruise' },
+      { time: '04:15 PM', event: 'Tea & Snacks' },
+      { time: '06:00 PM', event: 'Anchoring' },
+      { time: '07:30 PM', event: 'Dinner' },
+      { time: '08:30 AM', event: 'Breakfast' },
+      { time: '09:00 AM', event: 'Checkout' },
+    ],
+
+    packages: [
+      {
+        label: 'Premium Day Cruise',
+        price: '₹10,000',
+        dur: '12 PM - 5 PM',
+        inc: 'Lunch + Tea'
+      },
+      {
+        label: 'Luxury Overnight',
+        price: '₹12,000',
+        dur: '12 PM - 9 AM',
+        inc: 'All Meals'
+      },
+      {
+        label: 'Evening Retreat',
+        price: '₹10,000',
+        dur: '5 PM - 9 AM',
+        inc: 'Dinner + Breakfast'
+      },
+    ],
+  },
+
+  'ahb-008': {
+    name: 'AHB-008',
+    type: 'Deluxe',
+    bedrooms: 8,
+    price: '₹9,000',
+    image: "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241781/IMG-20251021-WA0045.jpg_rlird9.jpg",
+    images: [
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241748/IMG-20251021-WA0057.jpg_avsvwu.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241748/IMG-20251021-WA0048.jpg_jq4l4y.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241748/IMG-20251021-WA0058.jpg_t1uqu9.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241751/IMG-20251021-WA0052.jpg_hxulsn.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241775/IMG-20251021-WA0061.jpg_kkrzjz.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241776/IMG-20251021-WA0059.jpg_ewvvga.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241777/IMG-20251021-WA0060.jpg_mrcqfk.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241778/IMG-20251021-WA0049.jpg_y8aswq.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241779/IMG-20251021-WA0051.jpg_odpzla.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241782/IMG-20251021-WA0047.jpg_ejz3yq.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241783/IMG-20251021-WA0046.jpg_w5l4ee.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781242017/IMG-20251021-WA0047.jpg_gta0co.jpg",
+      "https://res.cloudinary.com/stark-and-nfly/image/upload/v1781242016/IMG-20251021-WA0054.jpg_djvqcd.jpg"
+    ],
+
+    desc:
+      'The largest in the collection, AHB-008 is built for reunions, destination celebrations and group tours. Spacious decks and panoramic views make every cruise unforgettable.',
+
+    amenities: [
+      '8 Guest Bedrooms',
+      'Large Upper Deck',
+      'Attached Bathrooms',
+      'Traditional Kerala Menu',
+      'Welcome Drink',
+      'Tea & Evening Snacks',
+      'Spacious Dining Hall',
+      'Experienced Staff',
+      'Safety Equipment',
+      'LED TV',
+      'Music System',
+      'Group Friendly Layout'
+    ],
+
+    itinerary: [
+      { time: '12:00 PM', event: 'Welcome & Boarding' },
+      { time: '01:00 PM', event: 'Traditional Lunch' },
+      { time: '02:00 PM', event: 'Scenic Backwater Cruise' },
+      { time: '04:00 PM', event: 'Tea & Snacks' },
+      { time: '06:00 PM', event: 'Evening Anchoring' },
+      { time: '07:30 PM', event: 'Dinner Service' },
+      { time: '08:30 AM', event: 'Breakfast' },
+      { time: '09:00 AM', event: 'Checkout' },
+    ],
+
+    packages: [
+      {
+        label: 'Deluxe Day Cruise',
+        price: '₹8,000',
+        dur: '12 PM - 5 PM',
+        inc: 'Lunch + Tea'
+      },
+      {
+        label: 'Grand Overnight',
+        price: '₹9,000',
+        dur: '12 PM - 9 AM',
+        inc: 'All Meals'
+      },
+      {
+        label: 'Night Experience',
+        price: '₹8,000',
+        dur: '5 PM - 9 AM',
+        inc: 'Dinner + Breakfast'
       },
     ],
   },

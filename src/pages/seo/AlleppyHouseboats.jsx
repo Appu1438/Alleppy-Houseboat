@@ -12,7 +12,7 @@ const highlights = [
 ]
 
 const boatTypes = [
-  { name: 'Deluxe Houseboat',  price: 'From ₹8,000',  desc: '1 bedroom, AC, attached bath, Kerala meals. Best value for couples.' },
+  { name: 'Deluxe Houseboat',  price: 'From ₹8,000',  desc: '1 bedroom, attached bath, Kerala meals. Best value for couples.' },
   { name: 'Premium Houseboat', price: 'From ₹10,000',  desc: '2 bedrooms, AC, spacious deck, chef-cooked meals.' },
   { name: 'Luxury Houseboat',  price: 'From ₹15,000', desc: '2 bedrooms, premium interiors, private deck, all meals.' },
   { name: 'Family Houseboat',  price: 'From ₹15,000', desc: '3–4 bedrooms, ideal for families and groups.' },
