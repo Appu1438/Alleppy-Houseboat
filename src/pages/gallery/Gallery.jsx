@@ -2,33 +2,33 @@ import { useState } from 'react'
 import './gallery.css'
 import { galleryImages, galleryVideos } from '../../themes/constants/gallery/gallery'
 
-const categories = [
-  'All',
-  'Houseboats',
-  'Interiors',
-  'Bedrooms',
-  'Deck & Balcony',
-  'Backwaters',
-]
+// const categories = [
+//   'All',
+//   'Houseboats',
+//   'Interiors',
+//   'Bedrooms',
+//   'Deck & Balcony',
+//   'Backwaters',
+// ]
 
-const categoryColors = {
-  Houseboats: '#0d3d3a',
-  Interiors: '#a8763e',
-  Bedrooms: '#7a9b8e',
-  'Deck & Balcony': '#c9a45c',
-  Backwaters: '#3f6b6b',
-  Dining: '#b5654d',
-}
+// const categoryColors = {
+//   Houseboats: '#0d3d3a',
+//   Interiors: '#a8763e',
+//   Bedrooms: '#7a9b8e',
+//   'Deck & Balcony': '#c9a45c',
+//   Backwaters: '#3f6b6b',
+//   Dining: '#b5654d',
+// }
 
 const galleryItems = Array.from(
   { length: galleryImages.length },
   (_, i) => {
-    const category = categories[1 + (i % (categories.length - 1))]
+    // const category = categories[1 + (i % (categories.length - 1))]
     return {
       id: i + 1,
       image: galleryImages[i],
-      category,
-      color: categoryColors[category],
+      // category,
+      // color: categoryColors[category],
       aspect:
         i % 5 === 0
           ? 'wide'
@@ -40,10 +40,10 @@ const galleryItems = Array.from(
 )
 
 export default function Gallery() {
-  const [active, setActive] = useState('All')
+  // const [active, setActive] = useState('All')
   const [lightbox, setLightbox] = useState(null)
 
-  const filtered = active === 'All' ? galleryItems : galleryItems.filter(g => g.category === active)
+  // const galleryImages = active === 'All' ? galleryItems : galleryItems.filter(g => g.category === active)
 
   return (
     <div className="gallery-page">
@@ -58,7 +58,7 @@ export default function Gallery() {
       </section>
 
       {/* Filter */}
-      <div className="filter-bar">
+      {/* <div className="filter-bar">
         <div className="container">
           <div className="filter-tabs">
             {categories.map(c => (
@@ -71,19 +71,19 @@ export default function Gallery() {
               </button>
             ))}
           </div>
-          <p className="results-count">{filtered.length} photos</p>
+          <p className="results-count">{galleryImages.length} photos</p>
         </div>
-      </div>
+      </div> */}
 
       {/* Masonry Grid */}
       <section className="section section--cream gallery-section">
         <div className="container">
           <div className="masonry-grid">
-            {filtered.map(item => (
+            {galleryItems.map(item => (
               <div
                 key={item.id}
                 className={`gallery-item ${item.aspect}`}
-                style={{ '--item-color': item.color }}
+                // style={{ '--item-color': item.color }}
                 onClick={() => setLightbox(item)}
               >
                 <div className="gallery-img">
@@ -101,7 +101,7 @@ export default function Gallery() {
                     <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
                 </div>
-                <span className="gallery-cat-badge">{item.category}</span>
+                {/* <span className="gallery-cat-badge">{item.category}</span> */}
               </div>
             ))}
           </div>
