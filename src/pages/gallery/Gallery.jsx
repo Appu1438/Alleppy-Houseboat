@@ -2,53 +2,42 @@ import { useState } from 'react'
 import './gallery.css'
 import { galleryImages, galleryVideos } from '../../themes/constants/gallery/gallery'
 
-const categories = ['All', 'Boats', 'Backwaters', 'Food', 'Sunsets', 'Activities']
+const categories = [
+  'All',
+  'Houseboats',
+  'Interiors',
+  'Bedrooms',
+  'Deck & Balcony',
+  'Backwaters',
+]
 
-const galleryItems = Array.from({ length: 20 }, (_, i) => ({
-  id: i + 1,
-  image: galleryImages[i % galleryImages.length],
+const categoryColors = {
+  Houseboats: '#0d3d3a',
+  Interiors: '#a8763e',
+  Bedrooms: '#7a9b8e',
+  'Deck & Balcony': '#c9a45c',
+  Backwaters: '#3f6b6b',
+  Dining: '#b5654d',
+}
 
-  category: categories[1 + (i % (categories.length - 1))],
-
-  aspect:
-    i % 5 === 0
-      ? 'wide'
-      : i % 7 === 0
-        ? 'tall'
-        : 'square',
-
-  color: [
-    '#2a8a82',
-    '#c9973a',
-    '#1a5c57',
-    '#d97b8a',
-    '#0d3d3a',
-    '#5a7a6a',
-  ][i % 6],
-
-  label: [
-    'Vembanad Lake Cruise',
-    'Sunset on the Backwaters',
-    'Traditional Kerala Sadhya',
-    'Houseboat Upper Deck',
-    'Paddy Fields Route',
-    'Fishermen at Dawn',
-    'Evening Reflections',
-    'Backwater Village',
-    'Kerala Seafood Feast',
-    'Alleppey Canal',
-    'Morning Mist Cruise',
-    'Lotus Flowers',
-    'Coir Boat Crafting',
-    'Chinese Fishing Nets',
-    'Moonlit Waters',
-    'Royal Lotus Deck',
-    'Honeymoon Setup',
-    'Bird Watching',
-    'Village Canoe Ride',
-    'Backwater Sunset',
-  ][i],
-}))
+const galleryItems = Array.from(
+  { length: galleryImages.length },
+  (_, i) => {
+    const category = categories[1 + (i % (categories.length - 1))]
+    return {
+      id: i + 1,
+      image: galleryImages[i],
+      category,
+      color: categoryColors[category],
+      aspect:
+        i % 5 === 0
+          ? 'wide'
+          : i % 7 === 0
+            ? 'tall'
+            : 'square',
+    }
+  }
+)
 
 export default function Gallery() {
   const [active, setActive] = useState('All')
@@ -60,8 +49,7 @@ export default function Gallery() {
     <div className="gallery-page">
       <section className="page-hero">
         <div className="page-hero-pattern" />
-
-        <div className="page-hero-overlay" />x``
+        <div className="page-hero-overlay" />
         <div className="container">
           <span className="section-label">Visual Journey</span>
           <h1>Photo Gallery</h1>
@@ -74,7 +62,13 @@ export default function Gallery() {
         <div className="container">
           <div className="filter-tabs">
             {categories.map(c => (
-              <button key={c} className={`filter-tab ${active === c ? 'active' : ''}`} onClick={() => setActive(c)}>{c}</button>
+              <button
+                key={c}
+                className={`filter-tab ${active === c ? 'active' : ''}`}
+                onClick={() => setActive(c)}
+              >
+                {c}
+              </button>
             ))}
           </div>
           <p className="results-count">{filtered.length} photos</p>
@@ -95,13 +89,17 @@ export default function Gallery() {
                 <div className="gallery-img">
                   <img
                     src={item.image}
-                    alt={item.label}
+                    alt={item.category}
                     loading="lazy"
                   />
                 </div>
                 <div className="gallery-item-overlay">
-                  <span>{item.label}</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="zoom-icon"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                  <svg className="zoom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                  </svg>
                 </div>
                 <span className="gallery-cat-badge">{item.category}</span>
               </div>
@@ -125,23 +123,16 @@ export default function Gallery() {
 
           <div className="video-grid">
             {galleryVideos.map((video) => (
-              <div
-                key={video.id}
-                className="video-card"
-              >
+              <div key={video.id} className="video-card">
                 <div className="video-wrapper">
                   <video
                     controls
                     preload="metadata"
                     poster="https://res.cloudinary.com/stark-and-nfly/image/upload/v1780586906/one-bedroom-premium-houseboat-alleppey_n6fvfp.jpg"
                   >
-                    <source
-                      src={video.video}
-                      type="video/mp4"
-                    />
+                    <source src={video.video} type="video/mp4" />
                   </video>
                 </div>
-
                 <div className="video-info">
                   <h3>{video.title}</h3>
                 </div>
@@ -157,12 +148,9 @@ export default function Gallery() {
           <button className="lb-close" onClick={() => setLightbox(null)}>✕</button>
           <div className="lb-content" onClick={e => e.stopPropagation()}>
             <div className="lb-img">
-              <img
-                src={lightbox.image}
-                alt={lightbox.label}
-              />
+              <img src={lightbox.image} alt={lightbox.category} />
             </div>
-            <p>{lightbox.label}</p>
+            <p>{lightbox.category}</p>
           </div>
         </div>
       )}
