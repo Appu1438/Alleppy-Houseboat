@@ -13,21 +13,21 @@ const heroSlides = [
     titleLine3: 'Backwaters',
   },
   {
-    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1600&q=80',
+    image: 'https://res.cloudinary.com/stark-and-nfly/image/upload/v1781204501/IMG-20260413-WA0005.jpg_bnh5qe.jpg',
     location: 'Kumarakom, Kerala',
     titleLine1: 'Wake Up To',
     titleLine2: 'Paradise',
     titleLine3: 'on Water',
   },
   {
-    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1600&q=80',
+    image: 'https://res.cloudinary.com/stark-and-nfly/image/upload/v1781241779/IMG-20251021-WA0051.jpg_odpzla.jpg',
     location: 'Vembanad Lake',
     titleLine1: 'Sail Into',
     titleLine2: 'God\'s Own',
     titleLine3: 'Country',
   },
   {
-    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1600&q=80',
+    image: 'https://res.cloudinary.com/stark-and-nfly/image/upload/v1781173520/IMG-20260603-WA0026.jpg_txdhlq.jpg',
     location: 'Kuttanad, Kerala',
     titleLine1: 'Adventure',
     titleLine2: 'Awaits on',
@@ -259,12 +259,12 @@ export default function Home() {
             <div className="intro-image-stack">
               <img
                 className="intro-img-main"
-                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&q=80"
+                src="https://res.cloudinary.com/stark-and-nfly/image/upload/v1781179273/IMG-20260518-WA0038.jpg_verhuy.jpg"
                 alt="Kerala houseboat on backwaters"
               />
               <img
                 className="intro-img-accent"
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80"
+                src="https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203240/IMG-20260505-WA0044.jpg_sshcpg.jpg"
                 alt="Sunset on backwaters"
               />
               <div className="intro-badge">
@@ -367,7 +367,7 @@ export default function Home() {
 
           <div className="exp-panel">
             <img
-              src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=900&q=80"
+              src="https://res.cloudinary.com/stark-and-nfly/image/upload/v1781203238/IMG-20260505-WA0040.jpg_bpmk9g.jpg"
               alt="Overnight houseboat experience"
             />
             <div className="exp-panel-overlay" />
@@ -381,7 +381,7 @@ export default function Home() {
 
           <div className="exp-panel">
             <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80"
+              src="https://res.cloudinary.com/stark-and-nfly/image/upload/v1781518045/IMG-20240711-WA0029.jpg_xxrn8u.jpg"
               alt="Day cruise experience"
             />
             <div className="exp-panel-overlay" />
