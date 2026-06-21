@@ -115,9 +115,10 @@ export default function Footer() {
         <div className="container">
           <p>© {year} Alappuzha Houseboat Holidays. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cancellation Policy</a>
+            <p>
+                Crafted with <span className="footer-heart">♥</span> by Adithyan
+
+            </p>
           </div>
         </div>
       </div>
