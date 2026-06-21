@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './faq.css'
+import FAQSEO from './FaqSeo'
 
 const faqCategories = [
   {
@@ -138,7 +139,7 @@ const faqCategories = [
 ]
 
 export default function FAQ() {
-  const [openItem, setOpenItem]           = useState(null)
+  const [openItem, setOpenItem] = useState(null)
   const [activeCategory, setActiveCategory] = useState('All')
 
   const toggle = key => setOpenItem(prev => prev === key ? null : key)
@@ -149,6 +150,7 @@ export default function FAQ() {
 
   return (
     <div className="faq-page">
+      <FAQSEO />
 
       {/* ── Hero ── */}
       <section className="page-hero">
@@ -205,7 +207,7 @@ export default function FAQ() {
                   </div>
                   <div className="faq-list">
                     {cat.faqs.map((item, i) => {
-                      const key    = `${cat.category}-${i}`
+                      const key = `${cat.category}-${i}`
                       const isOpen = openItem === key
                       return (
                         <div key={key} className={`faq-item ${isOpen ? 'open' : ''}`}>
@@ -302,7 +304,7 @@ export default function FAQ() {
               <p>Join thousands of happy guests who have experienced the magic of Kerala's backwaters.</p>
             </div>
             <div className="cta-band-actions">
-              <Link to="/contact"  className="btn btn-primary">Book Now</Link>
+              <Link to="/contact" className="btn btn-primary">Book Now</Link>
               <Link to="/packages" className="btn btn-outline">View Packages</Link>
             </div>
           </div>

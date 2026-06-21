@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import './contact.css'
+import ContactSEO from './ContactSeo'
 
 const contactInfo = [
   {
@@ -63,7 +64,7 @@ const initialForm = {
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
-  const [sent, setSent]   = useState(false)
+  const [sent, setSent] = useState(false)
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
@@ -77,6 +78,7 @@ export default function Contact() {
 
   return (
     <div className="contact-page">
+      <ContactSEO />
 
       {/* ── Hero ── */}
       <section className="page-hero">
@@ -258,12 +260,12 @@ export default function Contact() {
                     <path d="M20 150 Q80 80 160 110 Q240 140 300 60" stroke="#0096c7" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.3" />
                     <path d="M20 155 Q80 95 160 118 Q240 148 300 72" stroke="#48cae4" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.2" />
                     <circle cx="160" cy="110" r="12" fill="rgba(244,97,76,0.9)" />
-                    <circle cx="160" cy="110" r="5"  fill="white" />
+                    <circle cx="160" cy="110" r="5" fill="white" />
                     <path d="M160 98 L160 78" stroke="#f4614c" strokeWidth="1.5" opacity="0.7" />
                     <rect x="116" y="56" width="88" height="24" rx="4" fill="rgba(0,29,48,0.8)" />
                     <text x="160" y="72" textAnchor="middle" fill="var(--ocean-light)" fontSize="9" fontFamily="Plus Jakarta Sans, sans-serif" fontWeight="600">Alleppey Finishing Point</text>
-                    <circle cx="80"  cy="130" r="3" fill="#0096c7" opacity="0.4" />
-                    <circle cx="240" cy="90"  r="3" fill="#0096c7" opacity="0.4" />
+                    <circle cx="80" cy="130" r="3" fill="#0096c7" opacity="0.4" />
+                    <circle cx="240" cy="90" r="3" fill="#0096c7" opacity="0.4" />
                     <circle cx="280" cy="140" r="3" fill="#0096c7" opacity="0.3" />
                   </svg>
                 </div>
