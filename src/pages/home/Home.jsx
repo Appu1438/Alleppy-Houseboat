@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import './home.css'
 import { boats } from '../../themes/constants/boats/boats'
+import HomeSEO from './HomeSeo'
 
 /* ── Hero carousel slides ── */
 const heroSlides = [
@@ -151,6 +152,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <HomeSEO />
 
       {/* ══════════════════════════════
           HERO

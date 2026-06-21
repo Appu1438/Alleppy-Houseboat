@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './about.css'
+import AboutSEO from './AboutSeo'
 
 const milestones = [
   { year: '2009', event: 'Kerala Houseboat Holidays founded by Nandhu Ghosh with 2 houseboats at Alleppey Finishing Point.' },
@@ -12,23 +13,24 @@ const milestones = [
 
 const certifications = [
   { name: 'Kerala Tourism Department', icon: '🏛️', desc: 'Officially recognized houseboat operator' },
-  { name: 'DTPC Alappuzha',           icon: '✅', desc: 'District Tourism Promotion Council approved' },
-  { name: 'ISO 9001:2015',            icon: '📋', desc: 'Certified for quality management systems' },
-  { name: 'Green Kerala Initiative',   icon: '🌿', desc: 'Eco-responsible tourism operator' },
-  { name: 'TripAdvisor Excellence',    icon: '⭐', desc: 'Certificate of Excellence 2019–2024' },
-  { name: 'India Safe Tourism',        icon: '🛡️', desc: 'Enhanced safety & hygiene certified' },
+  { name: 'DTPC Alappuzha', icon: '✅', desc: 'District Tourism Promotion Council approved' },
+  { name: 'ISO 9001:2015', icon: '📋', desc: 'Certified for quality management systems' },
+  { name: 'Green Kerala Initiative', icon: '🌿', desc: 'Eco-responsible tourism operator' },
+  { name: 'TripAdvisor Excellence', icon: '⭐', desc: 'Certificate of Excellence 2019–2024' },
+  { name: 'India Safe Tourism', icon: '🛡️', desc: 'Enhanced safety & hygiene certified' },
 ]
 
 const values = [
-  { icon: '🌊', title: 'Authenticity',   desc: 'Every experience is rooted in the genuine culture, cuisine, and spirit of Kerala.' },
-  { icon: '🤝', title: 'Hospitality',    desc: 'We treat every guest as family. Your comfort, safety, and joy are our mission.' },
+  { icon: '🌊', title: 'Authenticity', desc: 'Every experience is rooted in the genuine culture, cuisine, and spirit of Kerala.' },
+  { icon: '🤝', title: 'Hospitality', desc: 'We treat every guest as family. Your comfort, safety, and joy are our mission.' },
   { icon: '🌿', title: 'Sustainability', desc: 'We protect the backwaters that sustain us — solar power, biodegradable practices, community support.' },
-  { icon: '💎', title: 'Excellence',     desc: 'From the food to the décor to the crew — we pursue the highest standard in everything we do.' },
+  { icon: '💎', title: 'Excellence', desc: 'From the food to the décor to the crew — we pursue the highest standard in everything we do.' },
 ]
 
 export default function About() {
   return (
     <div className="about-page">
+      <AboutSEO />
 
       {/* ── Hero ── */}
       <section className="page-hero">
@@ -60,10 +62,10 @@ export default function About() {
 
               <div className="story-stats">
                 {[
-                  { v: '50K+',  l: 'Guests Served' },
-                  { v: '25+',   l: 'Boats in Fleet' },
-                  { v: '45+',   l: 'Countries' },
-                  { v: '4.9★',  l: 'Avg. Rating' },
+                  { v: '50K+', l: 'Guests Served' },
+                  { v: '25+', l: 'Boats in Fleet' },
+                  { v: '45+', l: 'Countries' },
+                  { v: '4.9★', l: 'Avg. Rating' },
                 ].map(s => (
                   <div key={s.l} className="story-stat">
                     <strong>{s.v}</strong>
@@ -173,7 +175,7 @@ export default function About() {
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/packages" className="btn btn-primary">View Packages</Link>
-            <Link to="/contact"  className="btn btn-outline-dark">Get in Touch</Link>
+            <Link to="/contact" className="btn btn-outline-dark">Get in Touch</Link>
           </div>
         </div>
       </section>
