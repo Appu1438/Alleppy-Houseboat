@@ -9,9 +9,6 @@ import Gallery from './pages/gallery/Gallery'
 import About from './pages/about/About'
 import Contact from './pages/contact/Contact'
 import FAQ from './pages/faq/Faq'
-import AlleppeyHouseboats from './pages/seo/AlleppyHouseboats'
-import LuxuryHouseboats from './pages/seo/LuxuryHouseboats'
-import HoneymoonHouseboats from './pages/seo/HoneymoonHouseboats,'
 import NotFound from './pages/notFound/NotFound'
 
 
@@ -28,12 +25,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
-
-        {/* SEO Pages */}
-        <Route path="/alleppey-houseboats" element={<AlleppeyHouseboats />} />
-        <Route path="/luxury-houseboats-alleppey" element={<LuxuryHouseboats />} />
-        <Route path="/honeymoon-houseboats-alleppey" element={<HoneymoonHouseboats />} />
-
 
         <Route path="*" element={<NotFound />} />
 

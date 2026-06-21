@@ -78,8 +78,8 @@ export default function Footer() {
                 <li><Link to="/houseboats">Luxury Houseboats</Link></li>
                 <li><Link to="/houseboats">Honeymoon Special</Link></li>
                 <li><Link to="/houseboats">Family Packages</Link></li>
-                <li><Link to="/alleppey-houseboats">Alleppey Houseboats</Link></li>
-                <li><Link to="/luxury-houseboats-alleppey">Luxury in Alleppey</Link></li>
+                <li><Link to="/houseboats">Alleppey Houseboats</Link></li>
+                <li><Link to="/houseboats">Luxury in Alleppey</Link></li>
               </ul>
             </div>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './gallery.css'
 import { galleryImages, galleryVideos } from '../../themes/constants/gallery/gallery'
+import GallerySEO from './GallerySeo'
 
 const categories = [
   "All",
@@ -41,6 +42,7 @@ export default function Gallery() {
 
   return (
     <div className="gallery-page">
+      <GallerySEO />
       <section className="page-hero">
         <div className="page-hero-pattern" />
         <div className="page-hero-overlay" />

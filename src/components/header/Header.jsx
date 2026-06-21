@@ -15,7 +15,7 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [dropOpen, setDropOpen] = useState(false)
+  const [, setDropOpen] = useState(false)
 
   const dropRef = useRef(null)
   const { pathname } = useLocation()
@@ -109,58 +109,6 @@ export default function Header() {
                 </li>
               ))}
 
-              <li
-                className="dropdown-parent"
-                ref={dropRef}
-              >
-                <button
-                  className={`nav-link dropdown-trigger ${
-                    dropOpen ? 'open' : ''
-                  }`}
-                  onClick={() =>
-                    setDropOpen((v) => !v)
-                  }
-                  aria-expanded={dropOpen}
-                >
-                  Destinations
-
-                  <svg
-                    viewBox="0 0 12 8"
-                    className="chevron"
-                  >
-                    <path
-                      d="M1 1l5 5 5-5"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </button>
-
-                {dropOpen && (
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link to="/alleppey-houseboats">
-                        Alleppey Houseboats
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to="/luxury-houseboats-alleppey">
-                        Luxury Houseboats
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to="/honeymoon-houseboats-alleppey">
-                        Honeymoon Houseboats
-                      </Link>
-                    </li>
-
-                  </ul>
-                )}
-              </li>
             </ul>
           </nav>
 
@@ -212,28 +160,6 @@ export default function Header() {
                   </NavLink>
                 </li>
               ))}
-
-              <li className="mobile-sep">
-                Destinations
-              </li>
-
-              <li>
-                <Link to="/alleppey-houseboats">
-                  Alleppey Houseboats
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/luxury-houseboats-alleppey">
-                  Luxury Houseboats
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/honeymoon-houseboats-alleppey">
-                  Honeymoon Houseboats
-                </Link>
-              </li>
 
             </ul>
           </nav>

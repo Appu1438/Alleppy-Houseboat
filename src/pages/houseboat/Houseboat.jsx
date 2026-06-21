@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './houseboat.css'
 import { boats } from '../../themes/constants/boats/boats'
+import HouseboatsSEO from './HouseboatSeo'
 
 
 const types = ['All', 'Deluxe', 'Premium', 'Luxury']
@@ -22,6 +23,7 @@ export default function Houseboats() {
 
     return (
         <div className="houseboats-page">
+            <HouseboatsSEO />
 
             {/* Page Hero */}
             <section className="page-hero">
