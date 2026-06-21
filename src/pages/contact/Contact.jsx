@@ -68,13 +68,41 @@ export default function Contact() {
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log('Booking enquiry:', form)
-    setSent(true)
-    setForm(initialForm)
-    setTimeout(() => setSent(false), 6000)
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const message = `🌴 *NEW HOUSEBOAT BOOKING ENQUIRY* 🌴
+
+👤 *Name:* ${form.name}
+
+📞 *Phone:* ${form.phone}
+
+📧 *Email:* ${form.email || "Not Provided"}
+
+📅 *Preferred Date:* ${form.date}
+
+👥 *Guests:* ${form.guests}
+
+🚢 *Package:* ${form.package || "Not Specified"}
+
+💬 *Special Requests:*
+${form.message || "None"}
+
+━━━━━━━━━━━━━━━━━━
+Sent from Alleppey Houseboats Website
+━━━━━━━━━━━━━━━━━━`;
+
+    const whatsappUrl = `https://wa.me/917736262841?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    setSent(true);
+    setForm(initialForm);
+
+    setTimeout(() => setSent(false), 6000);
+  };
 
   return (
     <div className="contact-page">

@@ -5,9 +5,55 @@ import { boatData } from '../../themes/constants/boats/boatsData'
 
 const fallback = boatData['royal-lotus']
 
+
+
 export default function HouseboatDetail() {
   const { id } = useParams()
   const boat = boatData[id] || { ...fallback, name: 'Houseboat Details' }
+
+  const [enquiry, setEnquiry] = useState({
+    name: '',
+    phone: '',
+    date: '',
+    package: 'Day Cruise (12pm – 5pm)'
+  })
+
+  const handleEnquiryChange = (e) => {
+    setEnquiry(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const handleEnquirySubmit = () => {
+    if (!enquiry.name || !enquiry.phone || !enquiry.date) {
+      alert('Please fill all required fields')
+      return
+    }
+
+    const message = `🏝️ *HOUSEBOAT BOOKING ENQUIRY*
+
+🚢 *Houseboat:* ${boat.name}
+⭐ *Type:* ${boat.type}
+
+👤 *Customer Name:* ${enquiry.name}
+📱 *Phone:* ${enquiry.phone}
+
+📅 *Check-in Date:* ${enquiry.date}
+
+🎫 *Package:* ${enquiry.package}
+
+💰 *Starting Price:* ${boat.price}
+
+━━━━━━━━━━━━━━
+Sent from Alleppey Houseboats Website
+━━━━━━━━━━━━━━`
+
+    const whatsappUrl =
+      `https://wa.me/917736262841?text=${encodeURIComponent(message)}`
+
+    window.open(whatsappUrl, '_blank')
+  }
   const [tab, setTab] = useState('overview')
 
   /* ── Image gallery state ── */
@@ -48,7 +94,7 @@ export default function HouseboatDetail() {
 
       return next
     })
-  // eslint-disable-next-line react-hooks/preserve-manual-memoization
+    // eslint-disable-next-line react-hooks/preserve-manual-memoization
   }, [allImages.length])
 
   useEffect(() => {
@@ -311,28 +357,50 @@ export default function HouseboatDetail() {
                   <div className="form-row-2">
                     <div className="form-group">
                       <label>Your Name</label>
-                      <input type="text" placeholder="Full name" />
-                    </div>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Full name"
+                        value={enquiry.name}
+                        onChange={handleEnquiryChange}
+                      />                    </div>
                     <div className="form-group">
                       <label>Phone / WhatsApp</label>
-                      <input type="tel" placeholder="+91 xxxxx xxxxx" />
-                    </div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="+91 xxxxx xxxxx"
+                        value={enquiry.phone}
+                        onChange={handleEnquiryChange}
+                      />                    </div>
                   </div>
                   <div className="form-row-2">
                     <div className="form-group">
                       <label>Check-in Date</label>
-                      <input type="date" />
-                    </div>
+                      <input
+                        type="date"
+                        name="date"
+                        value={enquiry.date}
+                        onChange={handleEnquiryChange}
+                      />                    </div>
                     <div className="form-group">
                       <label>Package</label>
-                      <select>
+                      <select
+                        name="package"
+                        value={enquiry.package}
+                        onChange={handleEnquiryChange}
+                      >
                         <option>Day Cruise (12pm – 5pm)</option>
                         <option>Overnight Stay (12pm – 9am)</option>
                         <option>Night Stay (5pm – 9am)</option>
                       </select>
                     </div>
                   </div>
-                  <button className="btn btn-primary sidebar-submit" type="button">
+                  <button
+                    className="btn btn-primary sidebar-submit"
+                    type="button"
+                    onClick={handleEnquirySubmit}
+                  >
                     Send Enquiry
                   </button>
                 </div>
