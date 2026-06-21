@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './packages.css'
 import { packages } from '../../themes/constants/packages/packages'
+import PackagesSEO from './PackagesSeo'
 
 
 
@@ -33,6 +34,7 @@ const addons = [
 export default function Packages() {
   return (
     <div className="packages-page">
+      <PackagesSEO />
 
       {/* ── Hero ── */}
       <section className="page-hero">
